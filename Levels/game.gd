@@ -2,15 +2,15 @@ extends Node2D
 
 @onready var input_handler = $BaseInputHandler as BaseInputHandler
 var current_level:BaseLevel
-var current_level_idx = 1
+var current_level_idx = 2
 var player: Player 
 
 	
 func _ready(): 
-	load_player()
 	load_level()
+	load_player()
+	current_level._initialize_(player)
 	
-
 func load_level(): 
 	if current_level_idx == 0: 
 		var node = preload("res://Levels/base_level.tscn").instantiate()
@@ -18,10 +18,9 @@ func load_level():
 		current_level = node 
 		return 
 		
-	var path = "res://Levels/level_"+ str(current_level_idx) + ".tscn"
+	var path = "res://Levels/Level"+ str(current_level_idx) + "/level_"+ str(current_level_idx) + ".tscn"
 	var node = load(path).instantiate() 
 	add_child(node)
-	node._initialize_(player)
 	current_level = node 
 	pass 
 	

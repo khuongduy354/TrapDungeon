@@ -1,11 +1,15 @@
 extends BaseLevel 
 @onready var mobs = $Mobs
-
 @export var mob_move_speed = 0.25
 var dir = 1
 var f3_moved = false 
 var f4_moved = false 
 
+	
+func _initialize_(_p: Player): 
+	super._initialize_(_p)
+	p.cam.zoom = Vector2(3,3)
+	
 func _physics_process(delta): 
 	mobs_move(delta)
 	

@@ -10,8 +10,7 @@ Basic -> 1 Connected Holes -> 2 troll move right -> 3 troll right fake, left rea
 ### Sandwich
 Top and bottom sweep
 2 mobs at side shoot, so that it destroy platforms 
-Platforms middle
-Wasd 
+Platforms middle 
 Top stuck when reach certain 
 Bottom kill mobs then leave 2 holes for jumping
 Mobs block entrance -> win

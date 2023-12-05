@@ -6,3 +6,4 @@
 script = ExtResource("1_5p6i4")
 
 [node name="player_start" type="Marker2D" parent="."]
+position = Vector2(323, 89)

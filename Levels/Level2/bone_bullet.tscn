@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy4l008fdnaf7"]
+
+[ext_resource type="PackedScene" uid="uid://6esvhd834h2r" path="res://Ultility/bullet.tscn" id="1_m87hu"]
+[ext_resource type="Texture2D" uid="uid://cv2wgkxsoyrvw" path="res://assets/0x72_DungeonTilesetII_v1.6.png" id="2_h1bn8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bmqvt"]
+radius = 4.0
+height = 22.0
+
+[node name="BoneBullet" groups=["bone_bullet"] instance=ExtResource("1_m87hu")]
+
+[node name="Hitbox" parent="." index="0" groups=["bone_bullet"]]
+collision_layer = 8
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" index="0"]
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_bmqvt")
+
+[node name="0x72DungeonTilesetIiV1_6" type="Sprite2D" parent="." index="1"]
+rotation = 1.57079
+texture = ExtResource("2_h1bn8")
+region_enabled = true
+region_rect = Rect2(324, 202, 7, 21)

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c88l0xurhirbd"]
+
+[ext_resource type="PackedScene" uid="uid://b6b738ffccson" path="res://Mobs/mob.tscn" id="1_8impt"]
+[ext_resource type="Script" path="res://Levels/Level2/shooting_mobs.gd" id="2_hjeua"]
+[ext_resource type="Texture2D" uid="uid://cv2wgkxsoyrvw" path="res://assets/0x72_DungeonTilesetII_v1.6.png" id="2_ofwvd"]
+
+[node name="ShootingMobs" instance=ExtResource("1_8impt")]
+script = ExtResource("2_hjeua")
+
+[node name="Icon" parent="." index="0"]
+scale = Vector2(6.9993, 6.9993)
+texture = ExtResource("2_ofwvd")
+region_enabled = true
+region_rect = Rect2(371, 90, 10, 14)
+
+[node name="shoot_rate" type="Timer" parent="." index="2"]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="shoot_rate" to="." method="_on_shoot_rate_timeout"]
