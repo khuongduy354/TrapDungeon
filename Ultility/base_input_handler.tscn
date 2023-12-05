@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cq3m034tudra0"]
+
+[ext_resource type="Script" path="res://Ultility/BaseInputHandler.gd" id="1_13sxs"]
+
+[node name="BaseInputHandler" type="Node2D"]
+script = ExtResource("1_13sxs")
