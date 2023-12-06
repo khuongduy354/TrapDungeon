@@ -1,13 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://dw7flornv6yn8"]
+[gd_scene load_steps=6 format=3 uid="uid://dw7flornv6yn8"]
 
 [ext_resource type="Texture2D" uid="uid://cv2wgkxsoyrvw" path="res://assets/0x72_DungeonTilesetII_v1.6.png" id="1_30mal"]
 [ext_resource type="Script" path="res://Levels/Level2/SlideDown.gd" id="1_xl7cu"]
 [ext_resource type="PackedScene" uid="uid://7l65j1ha5ckl" path="res://Levels/DungeonTileMap.tscn" id="2_i481k"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xj05l"]
+size = Vector2(13, 30)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o444w"]
 size = Vector2(337, 45)
 
 [node name="RigidBody2D" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource("1_xl7cu")
 
@@ -23,12 +28,28 @@ texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
 
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_6"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_6/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
+
 [node name="0x72DungeonTilesetIiV1_7" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(23, 30)
 rotation = 3.14159
 texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
+
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_7"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_7/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_8" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(39, 30)
@@ -37,12 +58,28 @@ texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
 
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_8"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_8/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
+
 [node name="0x72DungeonTilesetIiV1_9" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(55, 30)
 rotation = 3.14159
 texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
+
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_9"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_9/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_10" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(70, 30)
@@ -51,12 +88,28 @@ texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
 
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_10"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_10/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
+
 [node name="0x72DungeonTilesetIiV1_11" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(86, 30)
 rotation = 3.14159
 texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
+
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_11"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_11/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_12" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(103, 30)
@@ -65,12 +118,28 @@ texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
 
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_12"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_12/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
+
 [node name="0x72DungeonTilesetIiV1_13" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(118, 30)
 rotation = 3.14159
 texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
+
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_13"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_13/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_14" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(134, 30)
@@ -79,12 +148,28 @@ texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
 
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_14"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_14/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
+
 [node name="0x72DungeonTilesetIiV1_15" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(149, 30)
 rotation = 3.14159
 texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
+
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_15"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_15/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_16" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(164, 30)
@@ -93,12 +178,28 @@ texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
 
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_16"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_16/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
+
 [node name="0x72DungeonTilesetIiV1_17" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(180, 30)
 rotation = 3.14159
 texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
+
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_17"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_17/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_18" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(194, 30)
@@ -107,12 +208,28 @@ texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
 
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_18"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_18/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
+
 [node name="0x72DungeonTilesetIiV1_20" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(317, 30)
 rotation = 3.14159
 texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
+
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_20"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_20/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_21" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(241, 30)
@@ -121,12 +238,28 @@ texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
 
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_21"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_21/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
+
 [node name="0x72DungeonTilesetIiV1_22" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(256, 30)
 rotation = 3.14159
 texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
+
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_22"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_22/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_23" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(272, 30)
@@ -135,12 +268,28 @@ texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
 
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_23"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_23/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
+
 [node name="0x72DungeonTilesetIiV1_24" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(286, 30)
 rotation = 3.14159
 texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
+
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_24"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_24/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_25" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(301, 30)
@@ -149,12 +298,28 @@ texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
 
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_25"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_25/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
+
 [node name="0x72DungeonTilesetIiV1_26" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(225, 30)
 rotation = 3.14159
 texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
+
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_26"]
+collision_layer = 4
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_26/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_27" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(210, 30)
@@ -163,12 +328,21 @@ texture = ExtResource("1_30mal")
 region_enabled = true
 region_rect = Rect2(322, 65, 12, 30)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="Sprite2D/0x72DungeonTilesetIiV1_27"]
 collision_layer = 4
 collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_27/Area2D"]
+position = Vector2(-0.500017, 3.8147e-06)
+shape = SubResource("RectangleShape2D_xj05l")
+
+[node name="Area2D" type="Area2D" parent="." groups=["knife"]]
+collision_layer = 4
+collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(168.5, 22.5)
 shape = SubResource("RectangleShape2D_o444w")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Bullet
 
-@export var speed = 3000
+@export var speed = 5000
 var dir = Vector2.ZERO 
 
 func _ready(): 

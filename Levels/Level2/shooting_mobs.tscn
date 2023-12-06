@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://c88l0xurhirbd"]
+[gd_scene load_steps=5 format=3 uid="uid://c88l0xurhirbd"]
 
 [ext_resource type="PackedScene" uid="uid://b6b738ffccson" path="res://Mobs/mob.tscn" id="1_8impt"]
 [ext_resource type="Script" path="res://Levels/Level2/shooting_mobs.gd" id="2_hjeua"]
 [ext_resource type="Texture2D" uid="uid://cv2wgkxsoyrvw" path="res://assets/0x72_DungeonTilesetII_v1.6.png" id="2_ofwvd"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqij5"]
+size = Vector2(73.6673, 93.7584)
+
 [node name="ShootingMobs" instance=ExtResource("1_8impt")]
+collision_layer = 2
+collision_mask = 5
 script = ExtResource("2_hjeua")
 
 [node name="Icon" parent="." index="0"]
@@ -17,4 +22,10 @@ region_rect = Rect2(371, 90, 10, 14)
 wait_time = 3.0
 autostart = true
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
+position = Vector2(-3.34851, 6.38678e-06)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_lqij5")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="timeout" from="shoot_rate" to="." method="_on_shoot_rate_timeout"]
