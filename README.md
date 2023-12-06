@@ -1,19 +1,8 @@
 # Implementation\
-[] Sandwich
- 
-### Dark Room 
-- Mobs run left right 
-- Jump through hole to get to top level
+[X] DarkRoom
+[X] Sandwich
+[] Stranger Things
 
-Basic -> 1 Connected Holes -> 2 troll move right -> 3 troll right fake, left real, when get on top right real
-
-### Sandwich
-Top and bottom sweep
-2 mobs at side shoot, so that it destroy platforms 
-Platforms middle 
-Top stuck when reach certain 
-Bottom kill mobs then leave 2 holes for jumping
-Mobs block entrance -> win
 
 ### Fly
 - top crushing down 
@@ -36,10 +25,35 @@ Mobs block entrance -> win
 ### tetris
  
 
-### Upside down gravity
+
+
+make a map, s.t it is a tunnel, combines all above 
+- gravity switch + static with diff sizes to force player 
+
+### Stranger Thing
 - take middle switch to reverse gravity
 - random things run either on top or bottom
++ up down spider
++ up but shoot down ( vice versa )
++ casual 
+- bottom pushing up (vice versa)
+- troll reverse card  (dodge, drop on face) 
 
+# Done
+
+### Dark Room 
+- Mobs run left right 
+- Jump through hole to get to top level
+
+Basic -> 1 Connected Holes -> 2 troll move right -> 3 troll right fake, left real, when get on top right real
+
+### Sandwich
+Top and bottom sweep
+2 mobs at side shoot, so that it destroy platforms 
+Platforms middle 
+Top stuck when reach certain 
+Bottom kill mobs then leave 2 holes for jumping
+Mobs block entrance -> win
 
 # Ideas 
 

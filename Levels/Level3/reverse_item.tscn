@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxhimj2pvdf15"]
+
+[ext_resource type="Texture2D" uid="uid://cv2wgkxsoyrvw" path="res://assets/0x72_DungeonTilesetII_v1.6.png" id="1_0xm06"]
+[ext_resource type="Script" path="res://Levels/Level3/ReversePotion.gd" id="1_y43f7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_djfh5"]
+radius = 4.0
+height = 14.0
+
+[node name="ReverseItem" type="Area2D"]
+scale = Vector2(0.959692, 1.03337)
+collision_layer = 4
+script = ExtResource("1_y43f7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_djfh5")
+
+[node name="0x72DungeonTilesetIiV1_6" type="Sprite2D" parent="."]
+texture = ExtResource("1_0xm06")
+region_enabled = true
+region_rect = Rect2(308, 355, 8, 11)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

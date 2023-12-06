@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bb6aot7wxy651"]
+
+[ext_resource type="PackedScene" uid="uid://drrcuv5nvagrb" path="res://Levels/Level3/gravity_mob.tscn" id="1_v1kt2"]
+[ext_resource type="Script" path="res://Levels/Level3/shooting_gravity_mob.gd" id="2_0cih8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eymnu"]
+radius = 120.546
+height = 288.366
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m3q4y"]
+size = Vector2(127.243, 162.417)
+
+[node name="ShootingGravityMob" instance=ExtResource("1_v1kt2")]
+script = ExtResource("2_0cih8")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(-4, 0)
+shape = SubResource("CapsuleShape2D_eymnu")
+
+[node name="Icon" parent="flip_pivot" index="0"]
+region_rect = Rect2(371, 90, 10, 14)
+
+[node name="CollisionShape2D" parent="flip_pivot/Hitbox" index="0"]
+position = Vector2(-3.34851, 0.499999)
+shape = SubResource("RectangleShape2D_m3q4y")
+
+[node name="Timer" type="Timer" parent="." index="2"]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

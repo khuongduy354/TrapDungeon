@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5cadecl38cp3"]
+
+[ext_resource type="PackedScene" uid="uid://drrcuv5nvagrb" path="res://Levels/Level3/gravity_mob.tscn" id="1_8vl7j"]
+[ext_resource type="Script" path="res://Levels/Level3/switch_gravity_mob.gd" id="2_esn3b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1q1dd"]
+radius = 117.968
+height = 235.936
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_okj80"]
+size = Vector2(127.243, 170.766)
+
+[node name="SwitchGravityMob" instance=ExtResource("1_8vl7j")]
+script = ExtResource("2_esn3b")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(-4, 0)
+shape = SubResource("CapsuleShape2D_1q1dd")
+
+[node name="Icon" parent="flip_pivot" index="0"]
+region_rect = Rect2(372, 22, 9, 10)
+
+[node name="CollisionShape2D" parent="flip_pivot/Hitbox" index="0"]
+position = Vector2(-3.34851, 1)
+scale = Vector2(0.175679, 0.175679)
+shape = SubResource("RectangleShape2D_okj80")
+
+[node name="Timer" type="Timer" parent="." index="2"]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
