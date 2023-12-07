@@ -16,6 +16,7 @@ func _initialize_(_p: Player):
 	
 func to_map(gpos): 
 	return tm.local_to_map(tm.to_local(gpos))
+	
 func clear_tile(gpos): 
 	var lpos = to_map(gpos)
 	tm.set_cell(0,lpos,-1)

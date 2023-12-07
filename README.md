@@ -4,6 +4,9 @@
 [] Stranger Things
 
 
+# The arrow
+
+
 ### Fly
 - top crushing down 
 - bottom pushing up
@@ -16,11 +19,6 @@
 - enter gungeon boss
 - door open portal randomly and go through the other, go throughg X times to exit  
 
-### boss 2 
-- same above but 2 of it 
-- 2 dmg each other 
-- lure until 1 dies 
-- 1 spread + 1 shoot and withdraw 
 
 ### tetris
  
@@ -105,14 +103,6 @@ Wall collapse right on hole
 Missile shoot hole
 Then throw gun as last attemp
 
-The arrow
-2 plats 
-1 jumpable 2nd fake disappear when jump 
-
-1st arrow shoot straifht pause shoot plat fast then bounce right at player pos. When reach player pos, fly horizontal according to player
-
-2nd arrow shoot pause shoot vr fast, only trigger when on platform, move left, or player attemp to jump over (100% hit) 
-Have to run fast to 1st platform (but it move a bit)
 
 
 # Components  

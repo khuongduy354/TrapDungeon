@@ -25,3 +25,16 @@ func apply_gravity(delta):
 
 func _on_hurtbox_area_entered(area):
 	g.player_hitted.emit()
+
+
+func _on_check_stuck_body_entered(body):
+	await get_tree().create_timer(.3).timeout
+	if $CheckStuck.get_overlapping_bodies().size() > 0: 
+		print("Stuck")
+		$CollisionShape2D.set_deferred("disabled",true)
+		$CheckStuck/CollisionShape2D2.set_deferred("disabled",true)
+		await get_tree().create_timer(.01).timeout
+		$CollisionShape2D.set_deferred("disabled",false)
+		$CheckStuck/CollisionShape2D2.set_deferred("disabled",false)
+		
+		
