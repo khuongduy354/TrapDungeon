@@ -4,7 +4,7 @@
 [] Stranger Things
 [X] Arrow
 [] Fly 
-[] Water
+[X] Water
 [] Chasing Boss 
 [] Bouncer
 

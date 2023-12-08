@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://7l65j1ha5ckl" path="res://Levels/DungeonTileMap.tscn" id="2_i481k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xj05l"]
-size = Vector2(13, 30)
+size = Vector2(8, 22)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o444w"]
 size = Vector2(337, 45)
@@ -33,7 +33,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_6/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(1.04904e-05, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_7" type="Sprite2D" parent="Sprite2D"]
@@ -48,7 +48,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_7/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(9.71556e-06, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_8" type="Sprite2D" parent="Sprite2D"]
@@ -63,7 +63,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_8/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(9.71556e-06, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_9" type="Sprite2D" parent="Sprite2D"]
@@ -78,7 +78,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_9/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(9.71556e-06, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_10" type="Sprite2D" parent="Sprite2D"]
@@ -93,7 +93,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_10/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(5.90086e-06, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_11" type="Sprite2D" parent="Sprite2D"]
@@ -108,7 +108,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_11/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(5.90086e-06, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_12" type="Sprite2D" parent="Sprite2D"]
@@ -123,7 +123,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_12/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(5.90086e-06, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_13" type="Sprite2D" parent="Sprite2D"]
@@ -138,7 +138,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_13/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(5.90086e-06, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_14" type="Sprite2D" parent="Sprite2D"]
@@ -153,7 +153,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_14/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(1.35303e-05, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_15" type="Sprite2D" parent="Sprite2D"]
@@ -168,7 +168,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_15/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(1.33514e-05, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_16" type="Sprite2D" parent="Sprite2D"]
@@ -183,7 +183,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_16/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(1.35303e-05, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_17" type="Sprite2D" parent="Sprite2D"]
@@ -198,7 +198,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_17/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(1.33514e-05, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_18" type="Sprite2D" parent="Sprite2D"]
@@ -213,7 +213,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_18/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(1.35303e-05, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_20" type="Sprite2D" parent="Sprite2D"]
@@ -228,7 +228,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_20/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(1.52588e-05, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_21" type="Sprite2D" parent="Sprite2D"]
@@ -243,7 +243,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_21/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(1.52588e-05, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_22" type="Sprite2D" parent="Sprite2D"]
@@ -258,7 +258,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_22/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(4.40478e-05, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_23" type="Sprite2D" parent="Sprite2D"]
@@ -273,7 +273,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_23/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(4.3869e-05, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_24" type="Sprite2D" parent="Sprite2D"]
@@ -288,7 +288,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_24/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(4.3869e-05, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_25" type="Sprite2D" parent="Sprite2D"]
@@ -303,7 +303,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_25/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(4.57764e-05, -4)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_26" type="Sprite2D" parent="Sprite2D"]
@@ -318,7 +318,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_26/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(-1.90735e-06, -3)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="0x72DungeonTilesetIiV1_27" type="Sprite2D" parent="Sprite2D"]
@@ -333,7 +333,7 @@ collision_layer = 4
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/0x72DungeonTilesetIiV1_27/Area2D"]
-position = Vector2(-0.500017, 3.8147e-06)
+position = Vector2(-1.72853e-06, -3)
 shape = SubResource("RectangleShape2D_xj05l")
 
 [node name="Area2D" type="Area2D" parent="." groups=["knife"]]
