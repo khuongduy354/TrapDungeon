@@ -3,9 +3,9 @@
 [X] Sandwich
 [] Stranger Things
 [X] Arrow
-[] Fly 
+[X] Fly 
 [X] Water
-[] Chasing Boss 
+[] Missile
 [X] Bouncer
 
 [] Tetris

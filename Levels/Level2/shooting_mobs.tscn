@@ -24,7 +24,6 @@ autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
 position = Vector2(-3.34851, 6.38678e-06)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_lqij5")
 
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

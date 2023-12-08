@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var input_handler = $BaseInputHandler as BaseInputHandler
 var current_level:BaseLevel
-var current_level_idx = 5
+var current_level_idx = 8
 var player: Player 
 
 	

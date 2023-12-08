@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccixfabq3mnot"]
+
+[ext_resource type="PackedScene" uid="uid://b6b738ffccson" path="res://Mobs/mob.tscn" id="1_pt0aj"]
+[ext_resource type="Script" path="res://Levels/Level8/missile_mob.gd" id="2_0mw2t"]
+[ext_resource type="Texture2D" uid="uid://cv2wgkxsoyrvw" path="res://assets/0x72_DungeonTilesetII_v1.6.png" id="3_dkep1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cipb3"]
+size = Vector2(113.849, 100.455)
+
+[node name="Mob" instance=ExtResource("1_pt0aj")]
+script = ExtResource("2_0mw2t")
+
+[node name="Icon" parent="." index="0"]
+position = Vector2(43.5307, 36.8336)
+scale = Vector2(8.75765, 8.37128)
+texture = ExtResource("3_dkep1")
+region_enabled = true
+region_rect = Rect2(370, 308, 13, 12)
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+position = Vector2(43.5307, 36.8336)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_cipb3")

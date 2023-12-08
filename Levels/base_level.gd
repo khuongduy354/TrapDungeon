@@ -24,3 +24,6 @@ func clear_tile(gpos):
 func fill_tile(gpos): 
 	var lpos = to_map(gpos)
 	tm.set_cell(0,lpos,0,Vector2i(3,2))	
+
+
+
