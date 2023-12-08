@@ -1,5 +1,6 @@
 extends MoveableEntity
 class_name Player 
+signal stuck
 @onready var input_handler = $BaseInputHandler as BaseInputHandler 
 @onready var cam = $Camera2D
 @export var jump_force = 500
@@ -44,6 +45,7 @@ func _on_check_stuck_body_entered(body):
 	await get_tree().create_timer(.3).timeout
 	if $CheckStuck.get_overlapping_bodies().size() > 0: 
 		print("Stuck")
+		stuck.emit() 
 		$CollisionShape2D.set_deferred("disabled",true)
 		$CheckStuck/CollisionShape2D2.set_deferred("disabled",true)
 		await get_tree().create_timer(.01).timeout

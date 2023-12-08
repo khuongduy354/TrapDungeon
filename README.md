@@ -11,13 +11,7 @@
 [] Tetris
 [] Boss 
 
-### Bouncer 
-- Ball bounce
-- bounce twice when target player  
-- 4 buttons
-- player lure so that 3 buttons are pressed.
-- last button dodge troll
- 
+
 
 
 ### Chasing Boss 
@@ -30,16 +24,12 @@
 - sections: normal run section, continous drop section, rich section but shoot, top down reverse section, 
 
 
-### Water 
-- space to change direction, up down 
-- mobs placements to make pathway 
-- mobs in path attack 
-- mobs from bottom, top 
+
 
 
 ### Fly
 - slider (top, bottom) 
-- space to push up fly 
+// - space to push up fly 
 - alarm on
 - fly through channel
 - zig zag dodge static trap 
@@ -55,10 +45,9 @@
 
 
 
-make a map, s.t it is a tunnel, combines all above 
-- gravity switch + static with diff sizes to force player 
 
 ### Stranger Thing
+- gravity switch + static with diff sizes to force player 
 - take middle switch to reverse gravity
 - random things run either on top or bottom
 + up down spider
@@ -68,7 +57,19 @@ make a map, s.t it is a tunnel, combines all above
 - troll reverse card  (dodge, drop on face) 
 
 # Done
+### Water 
+- space to change direction, up down 
+- mobs placements to make pathway 
+- mobs in path attack 
+- mobs from bottom, top 
 
+### Bouncer 
+- Ball bounce
+- bounce twice when target player  
+- 4 buttons
+- player lure so that 3 buttons are pressed.
+- last button dodge troll
+ 
 ### Dark Room 
 - Mobs run left right 
 - Jump through hole to get to top level
