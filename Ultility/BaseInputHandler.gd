@@ -1,7 +1,7 @@
 extends Node2D
 class_name BaseInputHandler
 
-enum InputMode{basic, mousespace}
+enum InputMode{basic, mousespace, updown}
 
 func get_action(player: Player, mode:InputMode = InputMode.basic)->Action: 
 	match mode: 
@@ -12,7 +12,13 @@ func get_action(player: Player, mode:InputMode = InputMode.basic)->Action:
 			return MovementAction.new(dir)			
 		InputMode.mousespace: 
 			var dir = get_spacemouse_input(player)
-			return MovementAction.new(dir)
+			if Input.is_action_pressed("jump"): 
+				return FlyAction.new(dir)
+			return FlyAction.new(Vector2.ZERO)
+		InputMode.updown: 
+			return DiveAction.new(Input.is_action_just_pressed("jump"))
+			
+			
 	return null
 
 func get_basic_input(): 

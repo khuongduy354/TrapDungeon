@@ -1,18 +1,49 @@
-# Implementation\
+# Implementation
 [X] DarkRoom
 [X] Sandwich
 [] Stranger Things
+[X] Arrow
+[] Fly 
+[] Water
+[] Chasing Boss 
+[] Bouncer
+
+[] Tetris
+[] Boss 
+
+### Bouncer 
+- Ball bounce
+- track its bouncing places
+- bounce twice when target player  
+- 4 buttons
+- player lure so that 3 buttons are pressed.
+- last button dodge troll
+ 
 
 
-# The arrow
+### Chasing Boss 
+- platforms: moving, jump to drop, jump to up
+- boss shoot platform down 
+- large boss sprite 
+- dodge platform
+- reverse potion 
+- slide down
+- sections: normal run section, continous drop section, rich section but shoot, top down reverse section, 
+
+
+### Water 
+- space to change direction, up down 
+- mobs placements to make pathway 
+- mobs in path attack 
+- mobs from bottom, top 
 
 
 ### Fly
-- top crushing down 
-- bottom pushing up
+- slider (top, bottom) 
+- space to push up fly 
 - alarm on
 - fly through channel
-- zig zag dodge 
+- zig zag dodge static trap 
 - but top malfunction and drop (troll)
 
 ### boss room 

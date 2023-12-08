@@ -3,18 +3,31 @@ class_name Player
 @onready var input_handler = $BaseInputHandler as BaseInputHandler 
 @onready var cam = $Camera2D
 @export var jump_force = 500
+@export var fly_force = 10 
 var grav_dir = 1
+var input_mode = BaseInputHandler.InputMode.basic
+var dive_dir = Vector2(1,1)
 func _physics_process(delta): 
-	var action = input_handler.get_action(self)
-	apply_gravity(delta)
-	if action is MovementAction: 
+	var action = input_handler.get_action(self,input_mode)
+	if action is MovementAction:
+		apply_gravity(delta)
 		_move(action.dir,delta)
 	elif action is JumpAction: 
+		apply_gravity(delta)
 		_jump() 
+	elif action is FlyAction: 
+		_fly(action.dir,delta)
+	elif action is DiveAction: 
+		_dive(delta,action.switch) 
 	move_and_slide()
-		
+func _dive(delta,switch): 
+	if switch:
+		dive_dir.y = -dive_dir.y	
+	velocity = dive_dir * move_speed * delta
 func _jump(): 
 	velocity.y = -jump_force * grav_dir
+func _fly(dir,delta): 
+	velocity = dir * move_speed * delta
 func _move(dir, delta): 
 	velocity.x = dir.x * move_speed * delta
 
