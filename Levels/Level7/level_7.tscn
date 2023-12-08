@@ -1,5 +1,98 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtqx4fbd45au1"]
+[gd_scene load_steps=7 format=3 uid="uid://dtqx4fbd45au1"]
 
 [ext_resource type="PackedScene" uid="uid://qr44ahcfpcn5" path="res://Levels/base_level.tscn" id="1_23jhr"]
+[ext_resource type="PackedScene" uid="uid://7l65j1ha5ckl" path="res://Levels/DungeonTileMap.tscn" id="2_i6kxe"]
+[ext_resource type="Script" path="res://Levels/Level7/level_7.gd" id="2_ltqix"]
+[ext_resource type="PackedScene" uid="uid://dv3gxj2l322t" path="res://Levels/Level7/bouncy_ball.tscn" id="3_1chq1"]
+[ext_resource type="PackedScene" uid="uid://bg0ec061hy41m" path="res://Levels/Level7/switch.tscn" id="5_a8yfd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4spqp"]
+size = Vector2(20, 43)
 
 [node name="Level7" instance=ExtResource("1_23jhr")]
+script = ExtResource("2_ltqix")
+
+[node name="player_start" parent="." index="0"]
+position = Vector2(231, 154)
+
+[node name="TileMap" parent="." index="1" instance=ExtResource("2_i6kxe")]
+layer_0/tile_data = PackedInt32Array(0, 196608, 3, 65536, 196608, 2, 131072, 196608, 3, 196608, 196608, 2, 262144, 196608, 3, 327680, 196608, 3, 393216, 196608, 3, 458752, 196608, 3, 524288, 196608, 2, 589824, 196608, 2, 655360, 196608, 3, 720896, 196608, 2, 720897, 196608, 3, 720898, 196608, 2, 720899, 196608, 3, 720900, 196608, 2, 720901, 196608, 3, 720902, 196608, 2, 720903, 196608, 2, 720904, 196608, 2, 720905, 196608, 2, 720906, 196608, 3, 720907, 196608, 2, 720908, 196608, 3, 720909, 196608, 2, 720910, 196608, 3, 720911, 196608, 3, 720912, 196608, 3, 720913, 196608, 3, 720914, 196608, 3, 720915, 196608, 3, 720916, 196608, 3, 720917, 196608, 3, 720918, 196608, 2, 720919, 196608, 2, 720920, 196608, 2, 720921, 196608, 3, 720922, 196608, 2, 720923, 196608, 2, 720924, 196608, 3, 720925, 196608, 3, 1, 196608, 2, 2, 196608, 2, 3, 196608, 2, 4, 196608, 2, 5, 196608, 2, 6, 196608, 2, 7, 196608, 2, 8, 196608, 2, 9, 196608, 3, 10, 196608, 3, 11, 196608, 2, 12, 196608, 3, 13, 196608, 2, 14, 196608, 2, 15, 196608, 2, 16, 196608, 2, 17, 196608, 2, 18, 196608, 3, 19, 196608, 3, 20, 196608, 2, 21, 196608, 2, 22, 196608, 3, 23, 196608, 2, 24, 196608, 3, 25, 196608, 3, 26, 196608, 2, 27, 196608, 2, 28, 196608, 2, 29, 196608, 3, 30, 196608, 3, 65566, 196608, 2, 131102, 196608, 3, 196638, 196608, 2, 262174, 196608, 3, 327710, 196608, 3, 393246, 196608, 3, 458782, 196608, 3, 524318, 196608, 2, 720926, 196608, 3, 655390, 196608, 2, 589854, 196608, 3)
+
+[node name="BouncyBall" parent="." index="2" instance=ExtResource("3_1chq1")]
+position = Vector2(373, 146)
+
+[node name="Buttons" type="Node2D" parent="." index="3"]
+
+[node name="Switch" parent="Buttons" index="0" instance=ExtResource("5_a8yfd")]
+position = Vector2(93, 23)
+rotation = 3.14159
+activated = true
+
+[node name="Switch2" parent="Buttons" index="1" instance=ExtResource("5_a8yfd")]
+position = Vector2(220, 23)
+rotation = 3.14159
+
+[node name="Switch3" parent="Buttons" index="2" instance=ExtResource("5_a8yfd")]
+position = Vector2(143, 170)
+
+[node name="Switch4" parent="Buttons" index="3" instance=ExtResource("5_a8yfd")]
+position = Vector2(474, 60)
+rotation = -1.5708
+
+[node name="Switch5" parent="Buttons" index="4" instance=ExtResource("5_a8yfd")]
+position = Vector2(305, 170)
+
+[node name="Switch6" parent="Buttons" index="5" instance=ExtResource("5_a8yfd")]
+position = Vector2(22, 114)
+rotation = 1.5708
+
+[node name="Switch7" parent="Buttons" index="6" instance=ExtResource("5_a8yfd")]
+position = Vector2(22, 83)
+rotation = 1.5708
+
+[node name="Switch8" parent="Buttons" index="7" instance=ExtResource("5_a8yfd")]
+position = Vector2(166, 23)
+rotation = 3.14159
+
+[node name="Switch9" parent="Buttons" index="8" instance=ExtResource("5_a8yfd")]
+position = Vector2(355, 22)
+rotation = 3.14159
+
+[node name="Switch10" parent="Buttons" index="9" instance=ExtResource("5_a8yfd")]
+visible = false
+position = Vector2(428, 22)
+rotation = 3.14159
+
+[node name="Area2D" type="Area2D" parent="." index="4"]
+position = Vector2(505, 143)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_4spqp")
+
+[node name="Positions" type="Node2D" parent="." index="5"]
+
+[node name="Marker2D" type="Marker2D" parent="Positions" index="0"]
+position = Vector2(487, 152)
+
+[node name="Marker2D2" type="Marker2D" parent="Positions" index="1"]
+position = Vector2(486, 170)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="6"]
+
+[node name="Label" type="Label" parent="CanvasLayer" index="0"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 100.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 50
+text = "Bounces: 0"
+
+[node name="Label2" type="Label" parent="." index="7"]
+offset_left = 68.0
+offset_top = 76.0
+offset_right = 413.0
+offset_bottom = 148.0
+text = "Every 2 bounces causes next bounce target player"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

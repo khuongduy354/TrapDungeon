@@ -4,24 +4,27 @@
 [ext_resource type="Texture2D" uid="uid://cv2wgkxsoyrvw" path="res://assets/0x72_DungeonTilesetII_v1.6.png" id="1_uhw2y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y0ddg"]
-radius = 8.24621
+radius = 12.1655
 
 [node name="BouncyBall" type="RigidBody2D"]
 collision_layer = 4
-collision_mask = 0
+collision_mask = 4
 gravity_scale = 0.0
 script = ExtResource("1_no2ii")
 
 [node name="0x72DungeonTilesetIiV1_6" type="Sprite2D" parent="."]
+scale = Vector2(2.38974, 2.38974)
 texture = ExtResource("1_uhw2y")
 region_enabled = true
 region_rect = Rect2(320, 322, 15, 13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 2)
 shape = SubResource("CircleShape2D_y0ddg")
 
 [node name="Hitbox" type="Area2D" parent="."]
 collision_layer = 4
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(4, 2)
 shape = SubResource("CircleShape2D_y0ddg")

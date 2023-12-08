@@ -6,14 +6,13 @@
 [] Fly 
 [X] Water
 [] Chasing Boss 
-[] Bouncer
+[X] Bouncer
 
 [] Tetris
 [] Boss 
 
 ### Bouncer 
 - Ball bounce
-- track its bouncing places
 - bounce twice when target player  
 - 4 buttons
 - player lure so that 3 buttons are pressed.
