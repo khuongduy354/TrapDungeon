@@ -12,7 +12,7 @@ func _physics_process(delta):
 		started = true
 		$BouncyBall.set_physics_process(true)
 		$Label3.queue_free()
-	
+		$Label2.queue_free()
 func setup_switches(): 
 	for switch in $Buttons.get_children(): 
 		var idx = switch.get_index()

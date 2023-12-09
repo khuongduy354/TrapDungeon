@@ -12,7 +12,7 @@ func _on_nolimit_pressed():
 	get_tree().change_scene_to_file("res://Levels/game.tscn")
 	
 func _on_heart_pressed():
-	if !hearts_edit.text.is_valid_int():
+	if !hearts_edit.text.is_valid_int() or hearts_edit.text == "0":
 		return
 	g.mode = g.modes.HEARTS
 	g.hearts = int(hearts_edit.text)

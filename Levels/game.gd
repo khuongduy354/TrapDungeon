@@ -37,6 +37,7 @@ func level_mapper(idx: int):
 	return result
 func _ready(): 
 	current_level_idx = g.level_idx
+	real_idx = g.level_idx
 	
 	if g.mode == g.modes.LIMITLESS:
 		g.player_hitted.connect(_on_limitless_death)
@@ -54,6 +55,7 @@ func _on_heart_death():
 	if hearts <= 0: 
 		current_level_idx = 1
 		hearts = g.hearts
+		$PlayerUI/Label.text = "Lifes: " + str(hearts)
 
 	clear()
 	$CanvasLayer.visible = true 
@@ -102,6 +104,10 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("r"): 
 		if current_level != null:
 			current_level.out_scene.emit()
+	if Input.is_action_just_pressed("esc"): 
+		$Pause.visible = true 
+		get_tree().paused = true
+
 	pass
 func load_level(): 
 	if current_level_idx == 0: 
