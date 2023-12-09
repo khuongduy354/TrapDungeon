@@ -5,12 +5,11 @@
 [X] Arrow
 [X] Fly 
 [X] Water
-[] Missile
+[X] Missile
 [X] Bouncer
 
-[] Tetris
+[X] Tetris
 [] Boss 
-
 
 
 
@@ -26,24 +25,7 @@
 
 
 
-
-### Fly
-- slider (top, bottom) 
-// - space to push up fly 
-- alarm on
-- fly through channel
-- zig zag dodge static trap 
-- but top malfunction and drop (troll)
-
-### boss room 
-- enter gungeon boss
-- door open portal randomly and go through the other, go throughg X times to exit  
-
-
-### tetris
  
-
-
 
 
 ### Stranger Thing
@@ -57,6 +39,15 @@
 - troll reverse card  (dodge, drop on face) 
 
 # Done
+### Fly
+- slider (top, bottom) 
+// - space to push up fly 
+- alarm on
+- fly through channel
+- zig zag dodge static trap 
+- but top malfunction and drop (troll)
+### tetris
+
 ### Water 
 - space to change direction, up down 
 - mobs placements to make pathway 
