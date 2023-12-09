@@ -44,3 +44,8 @@ func _on_c_5_area_entered(area):
 			for pos in $Positions3.get_children(): 
 				clear_tile(pos.global_position)
 		area.owner.queue_free()
+
+
+func _on_death_zone_body_entered(body):
+	if body is Player: 
+		g.player_hitted.emit()

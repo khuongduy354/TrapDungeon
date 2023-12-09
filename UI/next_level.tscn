@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgrumhn8qdkv8"]
+
+[ext_resource type="PackedScene" uid="uid://chljlcv21p2p0" path="res://UI/game_over.tscn" id="1_sx8f6"]
+
+[node name="NextLevel" instance=ExtResource("1_sx8f6")]
+
+[node name="Label" parent="." index="1"]
+text = "You passed this round! Wait a bit ..."

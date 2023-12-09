@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://w55pd0c8f4c4"]
+[gd_scene load_steps=17 format=3 uid="uid://w55pd0c8f4c4"]
 
 [ext_resource type="PackedScene" uid="uid://qr44ahcfpcn5" path="res://Levels/base_level.tscn" id="1_nic8h"]
 [ext_resource type="PackedScene" uid="uid://dmdiqmkbpy6cm" path="res://Levels/Level3/troll_platform.tscn" id="2_kk02b"]
@@ -57,6 +57,9 @@ _data = {
 "shoot": SubResource("Animation_tuu34"),
 "walk": SubResource("Animation_u0is0")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hguq7"]
+size = Vector2(5867, 38)
 
 [node name="Level10" instance=ExtResource("1_nic8h")]
 script = ExtResource("2_vmvai")
@@ -770,9 +773,21 @@ offset_right = 7366.0
 offset_bottom = 1959.0
 color = Color(0, 0, 0, 1)
 
+[node name="death_zone" type="Area2D" parent="." index="16"]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death_zone" index="0"]
+position = Vector2(2806, -209)
+shape = SubResource("RectangleShape2D_hguq7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="death_zone" index="1"]
+position = Vector2(2840.5, 923)
+shape = SubResource("RectangleShape2D_hguq7")
+
 [connection signal="body_entered" from="triggers/Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="triggers/c2" to="." method="_on_c_2_body_entered"]
 [connection signal="body_entered" from="triggers/c3" to="." method="_on_c_3_body_entered"]
 [connection signal="area_entered" from="triggers/c4" to="." method="_on_c_4_area_entered"]
 [connection signal="area_entered" from="triggers/c5" to="." method="_on_c_5_area_entered"]
 [connection signal="timeout" from="boss_timer" to="." method="_on_boss_timer_timeout"]
+[connection signal="body_entered" from="death_zone" to="." method="_on_death_zone_body_entered"]

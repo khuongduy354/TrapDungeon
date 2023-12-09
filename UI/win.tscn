@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhaa0etueccp7"]
+
+[ext_resource type="PackedScene" uid="uid://chljlcv21p2p0" path="res://UI/game_over.tscn" id="1_7a8sn"]
+
+[node name="Win" instance=ExtResource("1_7a8sn")]
+
+[node name="Label" parent="." index="1"]
+text = "Dude, i can't believe you beat this game.
+I cannot fully tested the game because I cant pass the level :D
+Thanks for playing, hope you have fun!"

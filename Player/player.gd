@@ -5,9 +5,13 @@ signal stuck
 @onready var cam = $Camera2D
 @export var jump_force = 500
 @export var fly_force = 10 
-var grav_dir = 1
+var grav_dir = 1:
+	set(val): 
+		grav_dir = val
+		up_direction = Vector2.UP * grav_dir
 var input_mode = BaseInputHandler.InputMode.basic
 var dive_dir = Vector2(1,1)
+
 func _physics_process(delta): 
 	var action = input_handler.get_action(self,input_mode)
 	if action is MovementAction:
@@ -15,7 +19,8 @@ func _physics_process(delta):
 		_move(action.dir,delta)
 	elif action is JumpAction: 
 		apply_gravity(delta)
-		_jump() 
+		if is_on_floor(): 
+			_jump() 
 	elif action is FlyAction: 
 		_fly(action.dir,delta)
 	elif action is DiveAction: 

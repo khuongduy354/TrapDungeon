@@ -44,3 +44,9 @@ func _on_shooter_timer_timeout():
 func _on_c_1_body_entered(body):
 	if body is Player: 
 		out_scene.emit()
+
+
+func _on_death_zone_body_entered(body):
+	if body is Player: 
+		g.player_hitted.emit()
+		

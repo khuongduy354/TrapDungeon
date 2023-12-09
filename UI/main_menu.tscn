@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0s1x5avlnmff"]
+
+[ext_resource type="Script" path="res://UI/main_menu.gd" id="1_00qfj"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_00qfj")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -5
+offset_left = -958.0
+offset_top = -491.0
+offset_right = 1336.0
+offset_bottom = 1156.0
+color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 41
+text = "Trap Dungeons"
+
+[node name="nolimit" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "No Limit Mode"
+
+[node name="heart" type="Button" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Customizable Heart Mode
+"
+
+[node name="LineEdit" type="LineEdit" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "How many lives you want?"
+
+[node name="HSlider2" type="HSlider" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+min_value = 1.0
+max_value = 10.0
+value = 1.0
+
+[node name="level_info" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Level selected: 1"
+
+[node name="Label3" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Play more to unlock levels!"
+
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/nolimit" to="." method="_on_nolimit_pressed"]
+[connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/heart" to="." method="_on_heart_pressed"]
+[connection signal="changed" from="CenterContainer/MarginContainer/VBoxContainer/HSlider2" to="." method="_on_h_slider_2_changed"]
+[connection signal="value_changed" from="CenterContainer/MarginContainer/VBoxContainer/HSlider2" to="." method="_on_h_slider_2_value_changed"]

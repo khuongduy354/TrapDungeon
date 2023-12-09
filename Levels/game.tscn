@@ -1,6 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bahtdfwbitrsn"]
+[gd_scene load_steps=4 format=3 uid="uid://bahtdfwbitrsn"]
 
 [ext_resource type="Script" path="res://Levels/game.gd" id="1_wyjln"]
+[ext_resource type="PackedScene" uid="uid://chljlcv21p2p0" path="res://UI/game_over.tscn" id="2_87wf4"]
+[ext_resource type="PackedScene" uid="uid://bgrumhn8qdkv8" path="res://UI/next_level.tscn" id="4_bfyj2"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_wyjln")
+
+[node name="PlayerUI" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="PlayerUI"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Death Counts: 0"
+
+[node name="CanvasLayer" parent="." instance=ExtResource("2_87wf4")]
+visible = false
+
+[node name="NextLevel" parent="." instance=ExtResource("4_bfyj2")]
+visible = false

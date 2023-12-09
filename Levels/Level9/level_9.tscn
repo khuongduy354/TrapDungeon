@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://2mlidft2cy6t"]
+[gd_scene load_steps=8 format=3 uid="uid://2mlidft2cy6t"]
 
 [ext_resource type="PackedScene" uid="uid://qr44ahcfpcn5" path="res://Levels/base_level.tscn" id="1_uefe0"]
 [ext_resource type="Script" path="res://Levels/Level9/level_9.gd" id="2_l0aep"]
@@ -8,6 +8,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_40pis"]
 size = Vector2(20, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kkxhi"]
+size = Vector2(1700, 14)
 
 [node name="Level9" instance=ExtResource("1_uefe0")]
 position = Vector2(461, 111)
@@ -81,5 +84,14 @@ offset_right = 1336.0
 offset_bottom = 1156.0
 color = Color(0, 0, 0, 1)
 
+[node name="death_zone" type="Area2D" parent="." index="11"]
+position = Vector2(-600, 537)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="death_zone" index="0"]
+position = Vector2(730, -3)
+shape = SubResource("RectangleShape2D_kkxhi")
+
 [connection signal="timeout" from="shooter_timer" to="." method="_on_shooter_timer_timeout"]
 [connection signal="body_entered" from="trigger/c1" to="." method="_on_c_1_body_entered"]
+[connection signal="body_entered" from="death_zone" to="." method="_on_death_zone_body_entered"]
