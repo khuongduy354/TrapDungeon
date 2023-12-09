@@ -55,7 +55,7 @@ func _on_c_5_body_entered(body):
 	for pos in $Positions.get_children(): 
 		clear_tile(pos.global_position)
 	off_collision($triggers/c5/CollisionShape2D)
-	await get_tree().create_timer(.3).timeout
+	await get_tree().create_timer(1).timeout
 	arrow_move(points2[1],.5,2)
 	
 

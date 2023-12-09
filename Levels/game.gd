@@ -73,8 +73,10 @@ func _on_limitless_death():
 	death_count += 1
 	$PlayerUI/Label.text = "Death Counts: "+str(death_count)
 func clear(): 
-	player.queue_free()
-	current_level.queue_free()
+	if player!=null: 
+		player.queue_free()
+	if current_level!=null: 
+		current_level.queue_free()
 	
 func start_level(): 
 	load_level()
@@ -101,9 +103,9 @@ func _on_level_done():
 	start_level()
 	
 func _physics_process(delta): 
-	if Input.is_action_just_pressed("r"): 
-		if current_level != null:
-			current_level.out_scene.emit()
+#	if Input.is_action_just_pressed("r"): 
+#		if current_level != null:
+#			current_level.out_scene.emit()
 	if Input.is_action_just_pressed("esc"): 
 		$Pause.visible = true 
 		get_tree().paused = true

@@ -50,3 +50,7 @@ func _on_death_zone_body_entered(body):
 	if body is Player: 
 		g.player_hitted.emit()
 		
+
+
+func _on_timer_timeout():
+	$Label3.visible = false
