@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://cgcw5rkrc6kea"]
+
+[ext_resource type="PackedScene" uid="uid://7l65j1ha5ckl" path="res://Levels/DungeonTileMap.tscn" id="1_p8xa8"]
+[ext_resource type="Script" path="res://Levels/Level9/Tetris/board.gd" id="1_sj4oe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_colti"]
+size = Vector2(144, 20)
+
+[node name="Board" type="Node2D"]
+script = ExtResource("1_sj4oe")
+
+[node name="TileMap" parent="." instance=ExtResource("1_p8xa8")]
+layer_0/tile_data = PackedInt32Array(0, 196608, 2, 1, 196608, 2, 2, 196608, 2, 3, 196608, 3, 4, 196608, 3, 5, 196608, 2, 6, 196608, 2, 7, 196608, 2, 8, 196608, 3, 9, 196608, 3, 10, 196608, 2, 11, 196608, 2, 65547, 196608, 3, 131083, 196608, 2, 196619, 196608, 3, 262155, 196608, 3, 65536, 196608, 2, 131072, 196608, 3, 196608, 196608, 2, 262144, 196608, 2, 327680, 196608, 2, 393216, 196608, 2, 458752, 196608, 3, 524288, 196608, 3, 327691, 196608, 2, 393227, 196608, 3, 458763, 196608, 3, 524299, 196608, 2, 589835, 196608, 3, 655371, 196608, 3, 720907, 196608, 2, 786443, 196608, 3, 1245195, 196608, 3, 1179659, 196608, 3, 1114123, 196608, 3, 1048587, 196608, 3, 983051, 196608, 3, 917515, 196608, 2, 851979, 196608, 3, 1245184, 196608, 3, 1179648, 196608, 3, 1114112, 196608, 2, 1048576, 196608, 3, 983040, 196608, 3, 917504, 196608, 2, 851968, 196608, 2, 786432, 196608, 2, 720896, 196608, 2, 655360, 196608, 3, 589824, 196608, 3, 1310720, 196608, 2, 1310721, 196608, 2, 1310722, 196608, 2, 1310723, 196608, 2, 1310724, 196608, 2, 1310725, 196608, 2, 1310726, 196608, 2, 1310727, 196608, 2, 1310728, 196608, 2, 1310729, 196608, 2, 1310730, 196608, 2, 1310731, 196608, 2)
+
+[node name="spawn" type="Marker2D" parent="."]
+position = Vector2(96, 56)
+
+[node name="drop" type="Timer" parent="."]
+wait_time = 0.3
+
+[node name="rush_zone" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rush_zone"]
+position = Vector2(96, 120)
+shape = SubResource("RectangleShape2D_colti")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 126.0
+offset_bottom = 98.0
+text = "Rushed!"
+
+[connection signal="timeout" from="drop" to="." method="_on_drop_timeout"]
+[connection signal="area_exited" from="rush_zone" to="." method="_on_rush_zone_area_exited"]
+[connection signal="body_entered" from="rush_zone" to="." method="_on_rush_zone_body_entered"]

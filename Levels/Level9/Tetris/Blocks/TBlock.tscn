@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6e3terjf5vvf"]
+
+[ext_resource type="PackedScene" uid="uid://c8miv2x5ti57j" path="res://Levels/Level9/Tetris/Blocks/block.tscn" id="1_al770"]
+
+[node name="Block" instance=ExtResource("1_al770")]
+
+[node name="TileMap" parent="." index="0"]
+position = Vector2(-8, -8)
+layer_0/tile_data = PackedInt32Array(65535, 196608, 2, 0, 196608, 2, 1, 196608, 3, -65536, 196608, 2)
+
+[node name="core" parent="TileMap" index="0"]
+position = Vector2(8, 8)

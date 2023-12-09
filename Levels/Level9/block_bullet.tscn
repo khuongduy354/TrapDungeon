@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpn2mbdllky1s"]
+
+[ext_resource type="PackedScene" uid="uid://6esvhd834h2r" path="res://Ultility/bullet.tscn" id="1_v3nh5"]
+[ext_resource type="Texture2D" uid="uid://cv2wgkxsoyrvw" path="res://assets/0x72_DungeonTilesetII_v1.6.png" id="2_vcjvl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dl0vq"]
+size = Vector2(16, 16)
+
+[node name="BlockBullet" instance=ExtResource("1_v3nh5")]
+
+[node name="Hitbox" parent="." index="0"]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" index="0"]
+shape = SubResource("RectangleShape2D_dl0vq")
+
+[node name="VisibleOnScreenNotifier2D" parent="." index="1"]
+position = Vector2(-0.999996, -1)
+scale = Vector2(0.8, 0.8)
+rect = Rect2(0, 0, 0, 0)
+
+[node name="0x72DungeonTilesetIiV1_6" type="Sprite2D" parent="." index="2"]
+texture = ExtResource("2_vcjvl")
+region_enabled = true
+region_rect = Rect2(40, 16, 16, 16)
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

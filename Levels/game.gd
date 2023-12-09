@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var input_handler = $BaseInputHandler as BaseInputHandler
 var current_level:BaseLevel
-var current_level_idx = 8
+var current_level_idx = 9
 var player: Player 
 
 	
@@ -10,7 +10,7 @@ func _ready():
 	load_level()
 	load_player()
 	current_level._initialize_(player)
-	
+	current_level.out_scene.connect(func(): print("WIN"))	
 func load_level(): 
 	if current_level_idx == 0: 
 		var node = preload("res://Levels/base_level.tscn").instantiate()

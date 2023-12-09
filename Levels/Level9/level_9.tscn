@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://2mlidft2cy6t"]
+
+[ext_resource type="PackedScene" uid="uid://qr44ahcfpcn5" path="res://Levels/base_level.tscn" id="1_uefe0"]
+[ext_resource type="Script" path="res://Levels/Level9/level_9.gd" id="2_l0aep"]
+[ext_resource type="PackedScene" uid="uid://cgcw5rkrc6kea" path="res://Levels/Level9/Tetris/board.tscn" id="2_xjpud"]
+[ext_resource type="PackedScene" uid="uid://7l65j1ha5ckl" path="res://Levels/DungeonTileMap.tscn" id="3_ag3ge"]
+[ext_resource type="PackedScene" uid="uid://bu6hcdi5ggbhg" path="res://Levels/Level9/block_shooter.tscn" id="5_tcpbe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_40pis"]
+size = Vector2(20, 49)
+
+[node name="Level9" instance=ExtResource("1_uefe0")]
+script = ExtResource("2_l0aep")
+
+[node name="player_start" parent="." index="0"]
+position = Vector2(94, 250)
+
+[node name="Board" parent="." index="1" instance=ExtResource("2_xjpud")]
+
+[node name="TileMap" parent="." index="2" instance=ExtResource("3_ag3ge")]
+layer_0/tile_data = PackedInt32Array(1310720, 196608, 2, 1310721, 196608, 2, 1310722, 196608, 3, 1310723, 196608, 3, 1310724, 196608, 2, 1310725, 196608, 3, 1310726, 196608, 3, 1310727, 196608, 3, 1310728, 196608, 2, 1310729, 196608, 3, 1310730, 196608, 3, 1310731, 196608, 3)
+
+[node name="Positions" type="Node2D" parent="." index="3"]
+
+[node name="Marker2D" type="Marker2D" parent="Positions" index="0"]
+position = Vector2(8, 182)
+
+[node name="Marker2D2" type="Marker2D" parent="Positions" index="1"]
+position = Vector2(185, 183)
+
+[node name="BlockShooter" parent="." index="4" instance=ExtResource("5_tcpbe")]
+position = Vector2(94, 9)
+
+[node name="Label" type="Label" parent="." index="5"]
+offset_left = 29.0
+offset_top = 94.0
+offset_right = 267.0
+offset_bottom = 120.0
+scale = Vector2(0.556934, 0.556934)
+text = "Press x to discard current blocks"
+
+[node name="Label2" type="Label" parent="." index="6"]
+visible = false
+offset_left = 20.0
+offset_top = 302.0
+offset_right = 258.0
+offset_bottom = 328.0
+scale = Vector2(0.556934, 0.556934)
+text = "<- GOAL "
+
+[node name="shooter_timer" type="Timer" parent="." index="7"]
+wait_time = 3.0
+one_shot = true
+
+[node name="trigger" type="Node2D" parent="." index="8"]
+
+[node name="c1" type="Area2D" parent="trigger" index="0"]
+position = Vector2(203, 295)
+collision_layer = 4
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trigger/c1" index="0"]
+position = Vector2(0, 14.5)
+shape = SubResource("RectangleShape2D_40pis")
+
+[node name="Positions2" type="Node2D" parent="." index="9"]
+
+[node name="Marker2D" type="Marker2D" parent="Positions2" index="0"]
+position = Vector2(185, 198)
+
+[node name="Marker2D2" type="Marker2D" parent="Positions2" index="1"]
+position = Vector2(8, 198)
+
+[connection signal="timeout" from="shooter_timer" to="." method="_on_shooter_timer_timeout"]
+[connection signal="body_entered" from="trigger/c1" to="." method="_on_c_1_body_entered"]

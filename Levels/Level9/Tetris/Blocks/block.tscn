@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8miv2x5ti57j"]
+
+[ext_resource type="Script" path="res://Levels/Level9/Tetris/Blocks/block.gd" id="1_tjqhx"]
+[ext_resource type="PackedScene" uid="uid://7l65j1ha5ckl" path="res://Levels/DungeonTileMap.tscn" id="1_xt6a2"]
+
+[node name="Block" type="Node2D"]
+script = ExtResource("1_tjqhx")
+
+[node name="TileMap" parent="." instance=ExtResource("1_xt6a2")]
+
+[node name="core" type="Marker2D" parent="TileMap"]
+
+[node name="to_chaos" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="to_chaos" to="." method="_on_to_chaos_timeout"]
