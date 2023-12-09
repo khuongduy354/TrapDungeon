@@ -19,7 +19,7 @@ region_enabled = true
 region_rect = Rect2(371, 90, 10, 14)
 
 [node name="shoot_rate" type="Timer" parent="." index="2"]
-wait_time = 3.0
+wait_time = 6.0
 autostart = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]

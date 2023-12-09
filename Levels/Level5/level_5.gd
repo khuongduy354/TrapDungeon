@@ -4,6 +4,7 @@ func _initialize_(_p: Player):
 	super._initialize_(_p)
 	_p.input_mode = BaseInputHandler.InputMode.mousespace
 	_p.stuck.connect(func(): g.player_hitted.emit())
+	_p.cam.zoom = Vector2(1.5,1.5)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

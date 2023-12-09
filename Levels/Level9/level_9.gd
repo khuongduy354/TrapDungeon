@@ -15,6 +15,7 @@ func _initialize_(_p: Player):
 	super._initialize_(_p)
 	_p.stuck.connect(func(): g.player_hitted.emit())
 	_p.jump_force = 300
+	_p.cam.zoom = Vector2.ONE
 	board.sweep_line.connect(_on_line_sweep)
 	board.start()
 	

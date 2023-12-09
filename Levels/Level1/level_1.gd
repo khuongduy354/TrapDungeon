@@ -55,7 +55,7 @@ func _on_floor_4_body_entered(body):
 
 
 func _on_floor_5_body_entered(body):
-	$triggers/floor5/CollisionShape2D.set_deferred("disabled",true)
+#	$triggers/floor5/CollisionShape2D.set_deferred("disabled",true)
 	for pos in $Floor5.get_children(): 
 		if pos.get_index() == 0 or pos.get_index() == 1: 
 			fill_tile(pos.global_position) 	

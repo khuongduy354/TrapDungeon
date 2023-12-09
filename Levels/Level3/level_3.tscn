@@ -16,7 +16,7 @@
 script = ExtResource("2_lumui")
 
 [node name="player_start" parent="." index="0"]
-position = Vector2(383, 316)
+position = Vector2(48, 119)
 
 [node name="ColorRect" type="ColorRect" parent="." index="1"]
 z_index = -5

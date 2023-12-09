@@ -2,7 +2,7 @@ extends BaseLevel
 
 func _initialize_(_p: Player): 
 	super._initialize_(_p)
-	p.cam.zoom = Vector2(1.3,1.3)
+	p.cam.zoom = Vector2(1.5,1.5)
 	p.jump_force = 350
 
 # Called when the node enters the scene tree for the first time.

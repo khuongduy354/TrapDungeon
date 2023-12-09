@@ -1,9 +1,18 @@
 extends BaseLevel
+var started = false
 func _initialize_(_p: Player): 
 	super._initialize_(_p) 
 	$BouncyBall._initialize_(_p)
 	$BouncyBall.bounce_changed.connect(_on_bounce_change)
 	setup_switches()
+	$BouncyBall.set_physics_process(false)
+	
+func _physics_process(delta):
+	if Input.is_action_just_pressed("ui_accept") and !started: 
+		started = true
+		$BouncyBall.set_physics_process(true)
+		$Label3.queue_free()
+	
 func setup_switches(): 
 	for switch in $Buttons.get_children(): 
 		var idx = switch.get_index()

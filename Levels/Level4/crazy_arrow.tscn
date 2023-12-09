@@ -1,11 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://csyp8gq568j4m"]
+[gd_scene load_steps=4 format=3 uid="uid://csyp8gq568j4m"]
 
 [ext_resource type="Texture2D" uid="uid://cv2wgkxsoyrvw" path="res://assets/0x72_DungeonTilesetII_v1.6.png" id="1_3fanl"]
+[ext_resource type="Script" path="res://Levels/Level4/crazy_arrow.gd" id="1_kfqlu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8vgsa"]
+size = Vector2(20, 7)
 
 [node name="CrazyArrow" type="CharacterBody2D"]
+script = ExtResource("1_kfqlu")
 
 [node name="0x72DungeonTilesetIiV1_6" type="Sprite2D" parent="."]
 rotation = 1.5708
 texture = ExtResource("1_3fanl")
 region_enabled = true
 region_rect = Rect2(324, 202, 7, 21)
+
+[node name="hitbox" type="Area2D" parent="."]
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_8vgsa")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

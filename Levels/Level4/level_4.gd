@@ -17,6 +17,7 @@ var points2 = [0.34,0.86,1]
 func _initialize_(_p: Player): 
 	super._initialize_(_p)
 	p.jump_force = 350
+	p.cam.zoom =Vector2(1.5,1.5)
 func arrow_move(val,dur,idx = 1,cb =func(): pass): 
 	var tween = create_tween()
 	var node = arrow1 if idx == 1 else arrow2

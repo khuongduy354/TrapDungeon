@@ -22,3 +22,5 @@ rotation = 1.57079
 texture = ExtResource("2_h1bn8")
 region_enabled = true
 region_rect = Rect2(324, 202, 7, 21)
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]

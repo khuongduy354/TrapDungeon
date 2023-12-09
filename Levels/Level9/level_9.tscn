@@ -10,6 +10,7 @@
 size = Vector2(20, 49)
 
 [node name="Level9" instance=ExtResource("1_uefe0")]
+position = Vector2(461, 111)
 script = ExtResource("2_l0aep")
 
 [node name="player_start" parent="." index="0"]
@@ -71,6 +72,14 @@ position = Vector2(185, 198)
 
 [node name="Marker2D2" type="Marker2D" parent="Positions2" index="1"]
 position = Vector2(8, 198)
+
+[node name="ColorRect" type="ColorRect" parent="." index="10"]
+z_index = -5
+offset_left = -958.0
+offset_top = -491.0
+offset_right = 1336.0
+offset_bottom = 1156.0
+color = Color(0, 0, 0, 1)
 
 [connection signal="timeout" from="shooter_timer" to="." method="_on_shooter_timer_timeout"]
 [connection signal="body_entered" from="trigger/c1" to="." method="_on_c_1_body_entered"]

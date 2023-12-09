@@ -1,10 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://dv3gxj2l322t"]
+[gd_scene load_steps=5 format=3 uid="uid://dv3gxj2l322t"]
 
 [ext_resource type="Script" path="res://Levels/Level7/bouncy_ball.gd" id="1_no2ii"]
 [ext_resource type="Texture2D" uid="uid://cv2wgkxsoyrvw" path="res://assets/0x72_DungeonTilesetII_v1.6.png" id="1_uhw2y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_y0ddg"]
 radius = 12.1655
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ceish"]
+radius = 13.0
 
 [node name="BouncyBall" type="RigidBody2D"]
 collision_layer = 4
@@ -27,4 +30,6 @@ collision_layer = 4
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(4, 2)
-shape = SubResource("CircleShape2D_y0ddg")
+shape = SubResource("CircleShape2D_ceish")
+
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
