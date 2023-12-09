@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b7ap78hnau64c"]
+[gd_scene load_steps=11 format=3 uid="uid://b7ap78hnau64c"]
 
 [ext_resource type="PackedScene" uid="uid://qr44ahcfpcn5" path="res://Levels/base_level.tscn" id="1_wyp7f"]
 [ext_resource type="PackedScene" uid="uid://7l65j1ha5ckl" path="res://Levels/DungeonTileMap.tscn" id="2_37ok1"]
@@ -10,11 +10,13 @@
 [ext_resource type="PackedScene" uid="uid://2m0j5drd3j2c" path="res://Ultility/troll_dodge.tscn" id="8_7sg3i"]
 [ext_resource type="PackedScene" uid="uid://dmdiqmkbpy6cm" path="res://Levels/Level3/troll_platform.tscn" id="9_j80xa"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_twevj"]
+
 [node name="Level3" instance=ExtResource("1_wyp7f")]
 script = ExtResource("2_lumui")
 
 [node name="player_start" parent="." index="0"]
-position = Vector2(7, 124)
+position = Vector2(383, 316)
 
 [node name="ColorRect" type="ColorRect" parent="." index="1"]
 z_index = -5
@@ -25,7 +27,7 @@ offset_bottom = 692.0
 color = Color(0.121569, 0.121569, 0.121569, 1)
 
 [node name="TileMap" parent="." index="2" instance=ExtResource("2_37ok1")]
-layer_0/tile_data = PackedInt32Array(655359, 196608, 2, 589824, 196608, 2, 589825, 196608, 2, 589826, 196608, 2, 589827, 196608, 2, 589828, 196608, 2, 589829, 196608, 2, 589830, 196608, 2, 589831, 196608, 3, 589832, 196608, 3, 589833, 196608, 3, 589834, 196608, 2, 589835, 196608, 2, 589836, 196608, 3, 589837, 196608, 3, 589838, 196608, 2, 589839, 196608, 3, 589840, 196608, 3, 589841, 196608, 2, 589842, 196608, 3, 589843, 196608, 3, 589844, 196608, 2, 589845, 196608, 2, 589846, 196608, 2, 589847, 196608, 2, 589848, 196608, 3, 589849, 196608, 2, 589850, 196608, 3, 589851, 196608, 2, 589852, 196608, 3, 589853, 196608, 3, 589854, 196608, 3, 589855, 196608, 2, 589856, 196608, 2, 589857, 196608, 2, 589858, 196608, 3, 589859, 196608, 3, 589860, 196608, 3, 589861, 196608, 3, 589862, 196608, 2, 589863, 196608, 2, 589864, 196608, 2, 589865, 196608, 2, 589866, 196608, 2, 589867, 196608, 3, 589868, 196608, 2, 589869, 196608, 2, 589870, 196608, 2, 589871, 196608, 2, 589872, 196608, 3, 589873, 196608, 3, 589874, 196608, 2, 589875, 196608, 2, 65534, 196608, 3, 65535, 196608, 2, 0, 196608, 2, 1, 196608, 2, 2, 196608, 3, 3, 196608, 3, 4, 196608, 3, 5, 196608, 2, 6, 196608, 3, 7, 196608, 2, 8, 196608, 2, 9, 196608, 2, 10, 196608, 3, 11, 196608, 2, 12, 196608, 3, 13, 196608, 3, 14, 196608, 3, 15, 196608, 3, 16, 196608, 3, 17, 196608, 2, 18, 196608, 3, 19, 196608, 3, 20, 196608, 2, 21, 196608, 2, 22, 196608, 2, 23, 196608, 2, 24, 196608, 2, 25, 196608, 3, 26, 196608, 2, 27, 196608, 2, 28, 196608, 2, 29, 196608, 2, 30, 196608, 3, 31, 196608, 3, 32, 196608, 2, 33, 196608, 3, 34, 196608, 3, 35, 196608, 2, 36, 196608, 3, 37, 196608, 2, 38, 196608, 2, 39, 196608, 2, 40, 196608, 3, 41, 196608, 3, 42, 196608, 3, 43, 196608, 3, 44, 196608, 2, 45, 196608, 3, 46, 196608, 3, 47, 196608, 2, 48, 196608, 2, 49, 196608, 2, 50, 196608, 3, 51, 196608, 2, 52, 196608, 3, 53, 196608, 2, 54, 196608, 3, 55, 196608, 3, 56, 196608, 3, 57, 196608, 3, 58, 196608, 3, 59, 196608, 2, 60, 196608, 3, 61, 196608, 3, 62, 196608, 3, 63, 196608, 3, 64, 196608, 2, 65, 196608, 3, 66, 196608, 2, 67, 196608, 2, 68, 196608, 2, 69, 196608, 2, 70, 196608, 3, 71, 196608, 3, 589876, 196608, 2, 589877, 196608, 2, 589878, 196608, 3, 589879, 196608, 2, 589880, 196608, 2, 589881, 196608, 3, 589882, 196608, 3, 589883, 196608, 2, 589884, 196608, 2, 589885, 196608, 3, 1376327, 196608, 3, 1376326, 196608, 2, 1376325, 196608, 2, 1376324, 196608, 2, 1376323, 196608, 2, 1376322, 196608, 3, 1376321, 196608, 3, 1376320, 196608, 3, 1376319, 196608, 3, 1376318, 196608, 2, 1376317, 196608, 3, 1376316, 196608, 2, 1376315, 196608, 2, 1376314, 196608, 2, 1376313, 196608, 2, 1376312, 196608, 3, 1376311, 196608, 2, 1376310, 196608, 2, 1376309, 196608, 3, 1376308, 196608, 3, 1376307, 196608, 2, 1376306, 196608, 2, 1376305, 196608, 3, 1376304, 196608, 2, 1376303, 196608, 2, 1376302, 196608, 3, 1376301, 196608, 2, 1376300, 196608, 3, 1376299, 196608, 3, 1376298, 196608, 3, 1376297, 196608, 3, 1376296, 196608, 2, 1376295, 196608, 2, 1376294, 196608, 3, 1376293, 196608, 3, 1376292, 196608, 3, 1376291, 196608, 2, 1376290, 196608, 3, 1376289, 196608, 2, 1376288, 196608, 2, 1376287, 196608, 2, 1376286, 196608, 2, 1376285, 196608, 3, 1376284, 196608, 2, 1376283, 196608, 2, 1376282, 196608, 2, 1376281, 196608, 3, 1376280, 196608, 2, 1376279, 196608, 3, 1376278, 196608, 2, 1376277, 196608, 3, 1376276, 196608, 3, 1376275, 196608, 3, 1376274, 196608, 2, 1376273, 196608, 2, 1376272, 196608, 3, 1376271, 196608, 2, 1376270, 196608, 2, 1376269, 196608, 3, 1376268, 196608, 3, 1376267, 196608, 3, 1376266, 196608, 2, 1376265, 196608, 3, 1376264, 196608, 2, 1376263, 196608, 3, 1376262, 196608, 3, 1376261, 196608, 3, 2031615, 196608, 2, 1966080, 196608, 3, 1966081, 196608, 3, 1966082, 196608, 2, 1966083, 196608, 3, 1966084, 196608, 2, 1966085, 196608, 2, 1966086, 196608, 2, 1966087, 196608, 2, 1966088, 196608, 2, 1966089, 196608, 3, 1966090, 196608, 2, 1966091, 196608, 3, 1966092, 196608, 2, 1966093, 196608, 3, 1966094, 196608, 3, 1966095, 196608, 3, 1966096, 196608, 3, 1966097, 196608, 2, 1966098, 196608, 3, 1966099, 196608, 2, 1966100, 196608, 2, 1966101, 196608, 3, 1966102, 196608, 2, 1966103, 196608, 2, 1966104, 196608, 3, 1966105, 196608, 3, 1966106, 196608, 2, 1966107, 196608, 2, 1966108, 196608, 3, 1966109, 196608, 3, 1966110, 196608, 2, 1966111, 196608, 3, 1966112, 196608, 2, 1966113, 196608, 3, 1966114, 196608, 3, 1966115, 196608, 3, 1966116, 196608, 2, 1966117, 196608, 2, 1966118, 196608, 3, 1966119, 196608, 2, 1966120, 196608, 3, 1966121, 196608, 3, 1966122, 196608, 2, 1966123, 196608, 3, 1966124, 196608, 3, 1966125, 196608, 3, 1966126, 196608, 2, 1966127, 196608, 3, 1966128, 196608, 3, 1966129, 196608, 3, 1966130, 196608, 3, 1966131, 196608, 2, 1966132, 196608, 3, 1966133, 196608, 2, 1966134, 196608, 3, 1966135, 196608, 2, 1966136, 196608, 2, 1966137, 196608, 3, 1966138, 196608, 2, 1966139, 196608, 3, 1966140, 196608, 3, 1966141, 196608, 2, 2621511, 196608, 3, 2621510, 196608, 2, 2621509, 196608, 3, 2621508, 196608, 3, 2621507, 196608, 2, 2621506, 196608, 2, 2621505, 196608, 3, 2621504, 196608, 2, 2621503, 196608, 3, 2621502, 196608, 3, 2621501, 196608, 3, 2621500, 196608, 2, 2621499, 196608, 2, 2621498, 196608, 3, 2621497, 196608, 3, 2621496, 196608, 3, 2621495, 196608, 3, 2621494, 196608, 3, 2621493, 196608, 2, 2621492, 196608, 3, 2621491, 196608, 2, 2621490, 196608, 2, 2621489, 196608, 2, 2621488, 196608, 3, 2621487, 196608, 3, 2621486, 196608, 3, 2621485, 196608, 2, 2621484, 196608, 3, 2621483, 196608, 2, 2621482, 196608, 3, 2621481, 196608, 3, 2621480, 196608, 2, 2621479, 196608, 3, 2621478, 196608, 3, 2621477, 196608, 3, 2621476, 196608, 2, 2621475, 196608, 3, 2621474, 196608, 2, 2621473, 196608, 2, 2621472, 196608, 2, 2621471, 196608, 3, 2621470, 196608, 3, 2621469, 196608, 3, 2621468, 196608, 2, 2621467, 196608, 3, 2621466, 196608, 3, 2621465, 196608, 2, 2621464, 196608, 3, 2621463, 196608, 3, 2621462, 196608, 3, 2621461, 196608, 2, 2621460, 196608, 3, 2621459, 196608, 2, 2621458, 196608, 3, 2621457, 196608, 3, 2621456, 196608, 2, 2621455, 196608, 3, 2621454, 196608, 2, 2621453, 196608, 3, 2621452, 196608, 3, 2621451, 196608, 3, 2621450, 196608, 3, 2621449, 196608, 3, 2621448, 196608, 3, 2621447, 196608, 3, 2621446, 196608, 3, 2621445, 196608, 2, 2621444, 196608, 2, 2621443, 196608, 3, 2621442, 196608, 3, 2621441, 196608, 2, 2621440, 196608, 3, 2686975, 196608, 3)
+layer_0/tile_data = PackedInt32Array(655359, 196608, 2, 589824, 196608, 2, 589825, 196608, 2, 589826, 196608, 2, 589827, 196608, 2, 589828, 196608, 2, 589829, 196608, 2, 589830, 196608, 2, 589831, 196608, 3, 589832, 196608, 3, 589833, 196608, 3, 589834, 196608, 2, 589835, 196608, 2, 589836, 196608, 3, 589837, 196608, 3, 589838, 196608, 2, 589839, 196608, 3, 589840, 196608, 3, 589841, 196608, 2, 589842, 196608, 3, 589843, 196608, 3, 589844, 196608, 2, 589845, 196608, 2, 589846, 196608, 2, 589847, 196608, 2, 589848, 196608, 3, 589849, 196608, 2, 589850, 196608, 3, 589851, 196608, 2, 589852, 196608, 3, 589853, 196608, 3, 589854, 196608, 3, 589855, 196608, 2, 589856, 196608, 2, 589857, 196608, 2, 589858, 196608, 3, 589859, 196608, 3, 589860, 196608, 3, 589861, 196608, 3, 589862, 196608, 2, 589863, 196608, 2, 589864, 196608, 2, 589865, 196608, 2, 589866, 196608, 2, 589867, 196608, 3, 589868, 196608, 2, 589869, 196608, 2, 589870, 196608, 2, 589871, 196608, 2, 589872, 196608, 3, 589873, 196608, 3, 589874, 196608, 2, 589875, 196608, 2, 65534, 196608, 3, 65535, 196608, 2, 0, 196608, 2, 1, 196608, 2, 2, 196608, 3, 3, 196608, 3, 4, 196608, 3, 5, 196608, 2, 6, 196608, 3, 7, 196608, 2, 8, 196608, 2, 9, 196608, 2, 10, 196608, 3, 11, 196608, 2, 12, 196608, 3, 13, 196608, 3, 14, 196608, 3, 15, 196608, 3, 16, 196608, 3, 17, 196608, 2, 18, 196608, 3, 19, 196608, 3, 20, 196608, 2, 21, 196608, 2, 22, 196608, 2, 23, 196608, 2, 24, 196608, 2, 25, 196608, 3, 26, 196608, 2, 27, 196608, 2, 28, 196608, 2, 29, 196608, 2, 30, 196608, 3, 31, 196608, 3, 32, 196608, 2, 33, 196608, 3, 34, 196608, 3, 35, 196608, 2, 36, 196608, 3, 37, 196608, 2, 38, 196608, 2, 39, 196608, 2, 40, 196608, 3, 41, 196608, 3, 42, 196608, 3, 43, 196608, 3, 44, 196608, 2, 45, 196608, 3, 46, 196608, 3, 47, 196608, 2, 48, 196608, 2, 49, 196608, 2, 50, 196608, 3, 51, 196608, 2, 52, 196608, 3, 53, 196608, 2, 54, 196608, 3, 55, 196608, 3, 56, 196608, 3, 57, 196608, 3, 58, 196608, 3, 59, 196608, 2, 60, 196608, 3, 61, 196608, 3, 62, 196608, 3, 63, 196608, 3, 64, 196608, 2, 65, 196608, 3, 66, 196608, 2, 67, 196608, 2, 68, 196608, 2, 69, 196608, 2, 70, 196608, 3, 71, 196608, 3, 589876, 196608, 2, 589877, 196608, 2, 589878, 196608, 3, 589879, 196608, 2, 589880, 196608, 2, 589881, 196608, 3, 589882, 196608, 3, 589883, 196608, 2, 589884, 196608, 2, 589885, 196608, 3, 1376327, 196608, 3, 1376326, 196608, 2, 1376325, 196608, 2, 1376324, 196608, 2, 1376323, 196608, 2, 1376322, 196608, 3, 1376321, 196608, 3, 1376320, 196608, 3, 1376319, 196608, 3, 1376318, 196608, 2, 1376317, 196608, 3, 1376316, 196608, 2, 1376315, 196608, 2, 1376314, 196608, 2, 1376313, 196608, 2, 1376312, 196608, 3, 1376311, 196608, 2, 1376310, 196608, 2, 1376309, 196608, 3, 1376308, 196608, 3, 1376307, 196608, 2, 1376306, 196608, 2, 1376305, 196608, 3, 1376304, 196608, 2, 1376303, 196608, 2, 1376302, 196608, 3, 1376301, 196608, 2, 1376300, 196608, 3, 1376299, 196608, 3, 1376298, 196608, 3, 1376297, 196608, 3, 1376296, 196608, 2, 1376295, 196608, 2, 1376294, 196608, 3, 1376293, 196608, 3, 1376292, 196608, 3, 1376291, 196608, 2, 1376290, 196608, 3, 1376289, 196608, 2, 1376288, 196608, 2, 1376287, 196608, 2, 1376286, 196608, 2, 1376285, 196608, 3, 1376284, 196608, 2, 1376283, 196608, 2, 1376282, 196608, 2, 1376281, 196608, 3, 1376280, 196608, 2, 1376279, 196608, 3, 1376278, 196608, 2, 1376277, 196608, 3, 1376276, 196608, 3, 1376275, 196608, 3, 1376274, 196608, 2, 1376273, 196608, 2, 1376272, 196608, 3, 1376271, 196608, 2, 1376270, 196608, 2, 1376269, 196608, 3, 1376268, 196608, 3, 1376267, 196608, 3, 1376266, 196608, 2, 1376265, 196608, 3, 1376264, 196608, 2, 1376263, 196608, 3, 1376262, 196608, 3, 1376261, 196608, 3, 851971, 196608, 3, 851970, 196608, 3, 851969, 196608, 2, 851968, 196608, 3, 917503, 196608, 3, 851972, 196608, 3, 1310725, 196608, 3, 1245189, 196608, 2, 1179653, 196608, 2, 1114117, 196608, 3, 917508, 196608, 3, 983044, 196608, 2, 1048580, 196608, 3, 1114116, 196608, 2)
 
 [node name="Mobs" type="Node2D" parent="." index="3"]
 
@@ -44,31 +46,101 @@ flipped = true
 position = Vector2(368, 112)
 
 [node name="GravityMob5" parent="Mobs" index="4" instance=ExtResource("3_c2vdh")]
-position = Vector2(576, 75)
-scale = Vector2(0.399432, 0.399432)
+position = Vector2(667, 127)
+scale = Vector2(0.266207, 0.266207)
 
-[node name="GravityMob6" parent="Mobs" index="5" instance=ExtResource("3_c2vdh")]
-position = Vector2(726, 85)
+[node name="GravityMob8" parent="Mobs" index="5" instance=ExtResource("3_c2vdh")]
+position = Vector2(536, 69)
+scale = Vector2(0.291203, 0.291203)
 
-[node name="GravityMob7" parent="Mobs" index="6" instance=ExtResource("3_c2vdh")]
+[node name="GravityMob6" parent="Mobs" index="6" instance=ExtResource("3_c2vdh")]
+position = Vector2(669, 55)
+
+[node name="GravityMob9" parent="Mobs" index="7" instance=ExtResource("3_c2vdh")]
+position = Vector2(609, 79)
+scale = Vector2(0.955473, 0.955473)
+flipped = true
+
+[node name="GravityMob10" parent="Mobs" index="8" instance=ExtResource("3_c2vdh")]
+position = Vector2(609, 79)
+scale = Vector2(0.955473, 0.955473)
+flipped = true
+
+[node name="GravityMob11" parent="Mobs" index="9" instance=ExtResource("3_c2vdh")]
+position = Vector2(937, 312)
+scale = Vector2(0.955473, 0.955473)
+
+[node name="GravityMob12" parent="Mobs" index="10" instance=ExtResource("3_c2vdh")]
+position = Vector2(766, 312)
+scale = Vector2(0.955473, 0.955473)
+flipped = true
+
+[node name="GravityMob13" parent="Mobs" index="11" instance=ExtResource("3_c2vdh")]
+position = Vector2(585, 315)
+scale = Vector2(0.955473, 0.955473)
+
+[node name="GravityMob14" parent="Mobs" index="12" instance=ExtResource("3_c2vdh")]
+position = Vector2(121, 309)
+scale = Vector2(0.955473, 0.955473)
+flipped = true
+
+[node name="GravityMob15" parent="Mobs" index="13" instance=ExtResource("3_c2vdh")]
+position = Vector2(320, 309)
+scale = Vector2(0.955473, 0.955473)
+
+[node name="GravityMob7" parent="Mobs" index="14" instance=ExtResource("3_c2vdh")]
 position = Vector2(532, 109)
 scale = Vector2(0.582226, 0.582226)
 
-[node name="SwitchGravityMob" parent="Mobs" index="7" instance=ExtResource("5_w03wf")]
+[node name="SwitchGravityMob" parent="Mobs" index="15" instance=ExtResource("5_w03wf")]
 position = Vector2(535, 112)
 
-[node name="SwitchGravityMob2" parent="Mobs" index="8" instance=ExtResource("5_w03wf")]
-position = Vector2(669, 117)
+[node name="SwitchGravityMob2" parent="Mobs" index="16" instance=ExtResource("5_w03wf")]
+position = Vector2(685, 118)
 flipped = true
 
-[node name="SwitchGravityMob3" parent="Mobs" index="9" instance=ExtResource("5_w03wf")]
+[node name="SwitchGravityMob3" parent="Mobs" index="17" instance=ExtResource("5_w03wf")]
 position = Vector2(781, 127)
 
-[node name="ShootingGravityMob" parent="Mobs" index="10" instance=ExtResource("6_fh0md")]
+[node name="SwitchGravityMob4" parent="Mobs" index="18" instance=ExtResource("5_w03wf")]
+position = Vector2(842, 252)
+
+[node name="SwitchGravityMob5" parent="Mobs" index="19" instance=ExtResource("5_w03wf")]
+position = Vector2(701, 246)
+flipped = true
+
+[node name="SwitchGravityMob6" parent="Mobs" index="20" instance=ExtResource("5_w03wf")]
+position = Vector2(516, 250)
+
+[node name="ShootingGravityMob" parent="Mobs" index="21" instance=ExtResource("6_fh0md")]
 position = Vector2(985, 96)
 
-[node name="ShootingGravityMob2" parent="Mobs" index="11" instance=ExtResource("6_fh0md")]
+[node name="ShootingGravityMob5" parent="Mobs" index="22" instance=ExtResource("6_fh0md")]
+position = Vector2(357, 202)
+flipped = true
+
+[node name="ShootingGravityMob6" parent="Mobs" index="23" instance=ExtResource("6_fh0md")]
+position = Vector2(223, 199)
+flipped = true
+
+[node name="ShootingGravityMob7" parent="Mobs" index="24" instance=ExtResource("6_fh0md")]
+position = Vector2(307, 204)
+flipped = true
+
+[node name="ShootingGravityMob8" parent="Mobs" index="25" instance=ExtResource("6_fh0md")]
+position = Vector2(447, 298)
+
+[node name="ShootingGravityMob2" parent="Mobs" index="26" instance=ExtResource("6_fh0md")]
 position = Vector2(1091, 291)
+flipped = true
+
+[node name="ShootingGravityMob3" parent="Mobs" index="27" instance=ExtResource("6_fh0md")]
+position = Vector2(1091, 291)
+flipped = true
+
+[node name="ShootingGravityMob4" parent="Mobs" index="28" instance=ExtResource("6_fh0md")]
+position = Vector2(1043, 291)
+scale = Vector2(0.656081, 0.656081)
 flipped = true
 
 [node name="Items" type="Node2D" parent="." index="4"]
@@ -76,10 +148,86 @@ flipped = true
 [node name="ReverseItem" parent="Items" index="0" instance=ExtResource("7_j7gmx")]
 position = Vector2(298, 92)
 
-[node name="ReverseItem2" parent="Items" index="1" instance=ExtResource("7_j7gmx")]
+[node name="ReverseItem3" parent="Items" index="1" instance=ExtResource("7_j7gmx")]
+position = Vector2(225, 67)
+
+[node name="ReverseItem2" parent="Items" index="2" instance=ExtResource("7_j7gmx")]
 position = Vector2(466, 80)
 
 [node name="TrollDodge" parent="Items/ReverseItem2" index="2" instance=ExtResource("8_7sg3i")]
 
+[node name="ReverseItem7" parent="Items" index="3" instance=ExtResource("7_j7gmx")]
+position = Vector2(935, 254)
+
+[node name="TrollDodge" parent="Items/ReverseItem7" index="2" instance=ExtResource("8_7sg3i")]
+
+[node name="ReverseItem8" parent="Items" index="4" instance=ExtResource("7_j7gmx")]
+position = Vector2(765, 251)
+
+[node name="TrollDodge" parent="Items/ReverseItem8" index="2" instance=ExtResource("8_7sg3i")]
+
+[node name="ReverseItem9" parent="Items" index="5" instance=ExtResource("7_j7gmx")]
+position = Vector2(589, 251)
+
+[node name="TrollDodge" parent="Items/ReverseItem9" index="2" instance=ExtResource("8_7sg3i")]
+
+[node name="ReverseItem10" parent="Items" index="6" instance=ExtResource("7_j7gmx")]
+position = Vector2(437, 250)
+
+[node name="TrollDodge" parent="Items/ReverseItem10" index="2" instance=ExtResource("8_7sg3i")]
+
+[node name="ReverseItem11" parent="Items" index="7" instance=ExtResource("7_j7gmx")]
+position = Vector2(301, 248)
+
+[node name="ReverseItem14" parent="Items" index="8" instance=ExtResource("7_j7gmx")]
+position = Vector2(321, 261)
+
+[node name="ReverseItem12" parent="Items" index="9" instance=ExtResource("7_j7gmx")]
+position = Vector2(120, 244)
+
+[node name="TrollDodge" parent="Items/ReverseItem12" index="2" instance=ExtResource("8_7sg3i")]
+position = Vector2(-2.084, 1.52588e-05)
+
+[node name="ReverseItem4" parent="Items" index="10" instance=ExtResource("7_j7gmx")]
+position = Vector2(634, 94)
+
+[node name="TrollDodge" parent="Items/ReverseItem4" index="2" instance=ExtResource("8_7sg3i")]
+
+[node name="ReverseItem5" parent="Items" index="11" instance=ExtResource("7_j7gmx")]
+position = Vector2(939, 93)
+
+[node name="TrollDodge" parent="Items/ReverseItem5" index="2" instance=ExtResource("8_7sg3i")]
+
+[node name="ReverseItem6" parent="Items" index="12" instance=ExtResource("7_j7gmx")]
+position = Vector2(1024, 79)
+
+[node name="TrollDodge" parent="Items/ReverseItem6" index="2" instance=ExtResource("8_7sg3i")]
+position = Vector2(-1.04211, -2.90314)
+
 [node name="TrollPlatform" parent="." index="5" instance=ExtResource("9_j80xa")]
 position = Vector2(130, 143)
+
+[node name="TrollPlatform2" parent="." index="6" instance=ExtResource("9_j80xa")]
+position = Vector2(781, 15)
+rotation = -3.14159
+
+[node name="TrollPlatform3" parent="." index="7" instance=ExtResource("9_j80xa")]
+position = Vector2(690, 337)
+rotation = -6.28319
+
+[node name="TrollPlatform4" parent="." index="8" instance=ExtResource("9_j80xa")]
+position = Vector2(842, 159)
+rotation = -9.42478
+
+[node name="TrollPlatform5" parent="." index="9" instance=ExtResource("9_j80xa")]
+position = Vector2(513, 159)
+rotation = -9.42478
+
+[node name="Area2D" type="Area2D" parent="." index="10"]
+position = Vector2(-7, 171)
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("RectangleShape2D_twevj")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

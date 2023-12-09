@@ -35,3 +35,5 @@ collision_layer = 2
 position = Vector2(-3.34851, 3.19339e-06)
 scale = Vector2(0.26475, 0.26475)
 shape = SubResource("RectangleShape2D_o6ir0")
+
+[connection signal="body_entered" from="flip_pivot/Hitbox" to="." method="_on_hitbox_body_entered"]
