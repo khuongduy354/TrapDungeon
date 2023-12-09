@@ -14,3 +14,4 @@ func _process(delta):
 func _on_body_entered(body):
 	if body is Player: 
 		body.grav_dir = -body.grav_dir 
+		self.queue_free()

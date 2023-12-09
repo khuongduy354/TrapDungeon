@@ -8,7 +8,6 @@ func _initialize_(_p: Player):
 	super._initialize_(_p)
 	_p.jump_force = 400
 	_p.cam=Vector2(1,1)
-
 func _on_area_2d_body_entered(body):
 	if body is Player: 
 		boss_speed = 60
@@ -27,19 +26,21 @@ func _on_c_3_body_entered(body):
 
 func _on_c_4_area_entered(area):
 	if area.owner is Boss: 
+		$AnimationPlayer.play("RESET")
 		boss_speed = 0 
 		$boss_timer.start()
 
 
 func _on_boss_timer_timeout():
+	print("hi")
 	$Boss.shoot(p)
 	
 var health = 1000
 func _on_c_5_area_entered(area):
 	if area.owner.is_in_group("block_bullet"): 
-		health -= 5
+		health -= 10
 		$Label.visible = !$Label.visible
-		print("hey")
 		if health <= 0: 
-			print("WIN")	
+			for pos in $Positions3.get_children(): 
+				clear_tile(pos.global_position)
 		area.owner.queue_free()

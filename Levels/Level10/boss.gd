@@ -3,14 +3,17 @@ class_name Boss
 func shoot(p:Player): 
 	match randi()%3: 
 		0: 
-			for i in range(10): 
+			for i in range(5): 
 				shoot_straight(p)
-				await get_tree().create_timer(.1).timeout
+				await get_tree().create_timer(.2).timeout
 		1: 
-			for i in range(3): 
+			for i in range(2): 
 				shoot_circle()
-				await get_tree().create_timer(.3).timeout
-		2: shoot_hell()
+				await get_tree().create_timer(.6).timeout
+		2: 
+			shoot_hell()
+			await get_tree().create_timer(1).timeout
+			
 		
 	pass
 func shoot_straight(p: Player): 
@@ -50,6 +53,8 @@ func shoot_hell():
 			var sdir = obullet.dir.rotated(i*PI/2)
 			dirs.append(sdir)
 		for dir in dirs: 
+			if randi()%2 != 0: 
+				continue
 			var bullet = preload("res://Levels/Level9/block_bullet.tscn").instantiate()
 			bullet.set_dir(dir)
 			bullet.scale = obullet.scale/2
