@@ -14,5 +14,19 @@ func wait(time):
 func _ready(): 
 	player_hitted.connect(func(): print("HITTED"))
 
-func read_max_lv_from_file(): 
+func read_max_lv_from_file()->int: 
+	var result =""
+	var txtFile = FileAccess.open("user://max_level.txt", FileAccess.READ)
+	if !FileAccess.file_exists("user://max_level.txt"): 
+		txtFile = FileAccess.open("user://max_level.txt", FileAccess.WRITE)
+	result = txtFile.get_as_text()
+	if result == "": 
+		save(str(1))
+		return 1 
+	txtFile.close()
+	return int(result)
 	
+func save(content):
+	var file = FileAccess.open("user://max_level.txt", FileAccess.WRITE)
+	file.store_string(content)
+	file.close()

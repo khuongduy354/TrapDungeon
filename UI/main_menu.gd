@@ -4,6 +4,9 @@ extends CanvasLayer
 @onready var hearts_edit = $CenterContainer/MarginContainer/VBoxContainer/LineEdit
 
 
+func _ready():
+	lvslider.max_value = g.read_max_lv_from_file()
+
 func _on_nolimit_pressed():
 	g.mode = g.modes.LIMITLESS
 	get_tree().change_scene_to_file("res://Levels/game.tscn")

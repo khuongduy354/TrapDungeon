@@ -79,7 +79,14 @@ func start_level():
 	load_player()
 	current_level._initialize_(player)
 	current_level.out_scene.connect(_on_level_done)	
+
 func _on_level_done(): 
+	# save new progress 
+	var old = g.read_max_lv_from_file()
+	if real_idx > old: 
+		g.save(str(real_idx))
+		
+	# do level done 
 	clear()
 	if real_idx == 10:
 		get_tree().change_scene_to_file("res://UI/win.tscn")
