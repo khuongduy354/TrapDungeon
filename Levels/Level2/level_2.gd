@@ -12,6 +12,7 @@ func _initialize_(_p: Player):
 	p.jump_force = 350
 	for mobs in $Mobs.get_children(): 
 		mobs._initialize_(p)
+
 func _ready():
 	$Goal.visible = g.show_hint
 

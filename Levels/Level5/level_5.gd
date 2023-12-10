@@ -7,7 +7,7 @@ func _initialize_(_p: Player):
 	_p.cam.zoom = Vector2(1.5,1.5)
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Label.visble = g.show_hint
+	$Label.visible = g.show_hint
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

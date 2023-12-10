@@ -293,10 +293,10 @@ libraries = {
 }
 
 [node name="Goal" type="Label" parent="." index="9"]
-offset_left = 820.0
-offset_top = 314.0
-offset_right = 874.0
-offset_bottom = 340.0
+offset_left = 794.0
+offset_top = 307.0
+offset_right = 848.0
+offset_bottom = 333.0
 text = "Goal ->"
 
 [connection signal="mob_killed" from="Sliders/RigidBody2D" to="." method="_on_rigid_body_2d_mob_killed"]

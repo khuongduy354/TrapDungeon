@@ -6,7 +6,8 @@ extends CanvasLayer
 
 func _ready():
 	lvslider.max_value = g.read_max_lv_from_file()
-
+	$HBoxContainer/CheckBox2.button_pressed = g.show_hint
+	$HBoxContainer/CheckBox.button_pressed = g.show_hint
 func _on_nolimit_pressed():
 	g.mode = g.modes.LIMITLESS
 	get_tree().change_scene_to_file("res://Levels/game.tscn")
