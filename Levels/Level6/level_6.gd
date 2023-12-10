@@ -23,7 +23,7 @@ func _ready():
 	$Label.visible = g.show_hint
 func _on_c_2_body_entered(body):
 	var t = $trigger/c2/StaticTrap22
-	$trigger/c2/CollisionShape2D.set_deferred("disabled",false)
+	$trigger/c2/CollisionShape2D.set_deferred("disabled",true)
 	t.visible = true 
 	await get_tree().create_timer(3).timeout
 	t.queue_free()

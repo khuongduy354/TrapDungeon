@@ -40,13 +40,14 @@ func _ready():
 	current_level_idx = g.level_idx
 	real_idx = g.level_idx
 	
-	if g.mode == g.modes.LIMITLESS:
-		g.player_hitted.connect(_on_limitless_death)
-		$PlayerUI/Label.text = "Death Counts: 0" 
-	elif g.mode == g.modes.HEARTS:
-		g.player_hitted.connect(_on_heart_death)
-		hearts = g.hearts
-		$PlayerUI/Label.text = "Lifes: " + str(g.hearts)
+	if !g.dmg_immune: 
+		if g.mode == g.modes.LIMITLESS:
+			g.player_hitted.connect(_on_limitless_death)
+			$PlayerUI/Label.text = "Death Counts: 0" 
+		elif g.mode == g.modes.HEARTS:
+			g.player_hitted.connect(_on_heart_death)
+			hearts = g.hearts
+			$PlayerUI/Label.text = "Lifes: " + str(g.hearts)
 	start_level()
 		
 		

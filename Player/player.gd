@@ -19,7 +19,7 @@ func _physics_process(delta):
 		_move(action.dir,delta)
 	elif action is JumpAction: 
 		apply_gravity(delta)
-		if is_on_floor(): 
+		if is_on_floor() or g.dmg_immune: 
 			_jump() 
 	elif action is FlyAction: 
 		_fly(action.dir,delta)

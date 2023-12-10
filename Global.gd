@@ -8,6 +8,7 @@ var mode = modes.LIMITLESS
 var hearts = 0
 var level_idx = 1
 var show_hint = true
+var dmg_immune = false
 func wait(time): 
 	await get_tree().create_timer(time).timeout	
 

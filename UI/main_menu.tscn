@@ -89,9 +89,15 @@ text = "Level selected: 1"
 layout_mode = 2
 text = "Play more to unlock levels!"
 
+[node name="CheckBox3" type="CheckBox" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+text = "Cheat mode: Damage Immnune"
+
 [connection signal="toggled" from="HBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]
 [connection signal="toggled" from="HBoxContainer/CheckBox2" to="." method="_on_check_box_2_toggled"]
 [connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/nolimit" to="." method="_on_nolimit_pressed"]
 [connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/heart" to="." method="_on_heart_pressed"]
 [connection signal="changed" from="CenterContainer/MarginContainer/VBoxContainer/HSlider2" to="." method="_on_h_slider_2_changed"]
 [connection signal="value_changed" from="CenterContainer/MarginContainer/VBoxContainer/HSlider2" to="." method="_on_h_slider_2_value_changed"]
+[connection signal="toggled" from="CenterContainer/MarginContainer/VBoxContainer/CheckBox3" to="." method="_on_check_box_3_toggled"]

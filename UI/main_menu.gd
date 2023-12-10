@@ -5,7 +5,8 @@ extends CanvasLayer
 
 
 func _ready():
-	lvslider.max_value = g.read_max_lv_from_file()
+	$CenterContainer/MarginContainer/VBoxContainer/CheckBox3.button_pressed = g.dmg_immune
+	lvslider.max_value = 10
 	$HBoxContainer/CheckBox2.button_pressed = g.show_hint
 	$HBoxContainer/CheckBox.button_pressed = g.show_hint
 func _on_nolimit_pressed():
@@ -33,3 +34,7 @@ func _on_check_box_2_toggled(button_pressed):
 
 func _on_check_box_toggled(button_pressed):
 	g.show_hint = button_pressed
+
+
+func _on_check_box_3_toggled(button_pressed):
+	g.dmg_immune = button_pressed
