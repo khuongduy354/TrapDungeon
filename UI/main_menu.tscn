@@ -6,12 +6,42 @@
 script = ExtResource("1_00qfj")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-z_index = -5
-offset_left = -958.0
-offset_top = -491.0
-offset_right = 1336.0
-offset_bottom = 1156.0
+z_index = -10
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
 color = Color(0.164706, 0.164706, 0.164706, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 76.0
+offset_top = -90.0
+offset_right = -40.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+button_pressed = true
+text = "Show hints"
+
+[node name="Control" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CheckBox2" type="CheckBox" parent="HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+button_pressed = true
+text = "Audio"
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchors_preset = 15
@@ -19,6 +49,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer"]
 layout_mode = 2
@@ -58,6 +89,8 @@ text = "Level selected: 1"
 layout_mode = 2
 text = "Play more to unlock levels!"
 
+[connection signal="toggled" from="HBoxContainer/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="toggled" from="HBoxContainer/CheckBox2" to="." method="_on_check_box_2_toggled"]
 [connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/nolimit" to="." method="_on_nolimit_pressed"]
 [connection signal="pressed" from="CenterContainer/MarginContainer/VBoxContainer/heart" to="." method="_on_heart_pressed"]
 [connection signal="changed" from="CenterContainer/MarginContainer/VBoxContainer/HSlider2" to="." method="_on_h_slider_2_changed"]

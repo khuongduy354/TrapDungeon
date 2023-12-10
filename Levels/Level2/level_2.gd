@@ -13,8 +13,7 @@ func _initialize_(_p: Player):
 	for mobs in $Mobs.get_children(): 
 		mobs._initialize_(p)
 func _ready():
-	pass # Replace with function body.
-
+	$Goal.visible = g.show_hint
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

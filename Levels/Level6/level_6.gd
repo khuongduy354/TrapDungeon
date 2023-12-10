@@ -19,8 +19,8 @@ func _on_c_1_body_entered(body):
 		if !child.is_in_group("no_move"):
 			child.speed = 10
 		child.shoot_left_to_right()
-
-
+func _ready():
+	$Label.visible = g.show_hint
 func _on_c_2_body_entered(body):
 	var t = $trigger/c2/StaticTrap22
 	$trigger/c2/CollisionShape2D.set_deferred("disabled",false)

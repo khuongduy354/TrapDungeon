@@ -4,11 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://cv2wgkxsoyrvw" path="res://assets/0x72_DungeonTilesetII_v1.6.png" id="3_tfcaa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bgdp6"]
-radius = 120.546
-height = 361.639
+radius = 78.6452
+height = 301.473
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6ir0"]
-size = Vector2(127.243, 208.634)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cjoc8"]
+radius = 53.2433
+height = 188.857
 
 [node name="GravityMob" type="CharacterBody2D"]
 collision_layer = 2
@@ -32,8 +33,8 @@ region_rect = Rect2(369, 375, 13, 17)
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="flip_pivot/Hitbox"]
-position = Vector2(-3.34851, 3.19339e-06)
+position = Vector2(-2, 1)
 scale = Vector2(0.26475, 0.26475)
-shape = SubResource("RectangleShape2D_o6ir0")
+shape = SubResource("CapsuleShape2D_cjoc8")
 
 [connection signal="body_entered" from="flip_pivot/Hitbox" to="." method="_on_hitbox_body_entered"]

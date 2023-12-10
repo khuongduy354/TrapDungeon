@@ -22,3 +22,13 @@ func _on_heart_pressed():
 func _on_h_slider_2_value_changed(value):
 	lvinfo.text = "Level selected: "+str(value)
 	g.level_idx = value
+
+
+
+
+func _on_check_box_2_toggled(button_pressed):
+	AudioServer.set_bus_mute(0,!button_pressed)
+
+
+func _on_check_box_toggled(button_pressed):
+	g.show_hint = button_pressed

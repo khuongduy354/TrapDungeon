@@ -39,7 +39,10 @@ var health = 1000
 func _on_c_5_area_entered(area):
 	if area.owner.is_in_group("block_bullet"): 
 		health -= 10
-		$Label.visible = !$Label.visible
+		if g.show_hint: 
+			$Label.visible = !$Label.visible
+		else: 
+			$Label.visible = false
 		if health <= 0: 
 			for pos in $Positions3.get_children(): 
 				clear_tile(pos.global_position)

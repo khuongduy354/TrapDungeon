@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://cv2wgkxsoyrvw" path="res://assets/0x72_DungeonTilesetII_v1.6.png" id="1_p5hv4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ppkta"]
-size = Vector2(9, 25)
+size = Vector2(9, 13)
 
 [node name="StaticTrap" type="Area2D"]
 collision_layer = 4
 script = ExtResource("1_6xv8r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 4.5)
+position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_ppkta")
 
 [node name="0x72DungeonTilesetIiV1_6" type="Sprite2D" parent="."]

@@ -10,6 +10,7 @@ var player: Player
 
 var death_count = 0
 var hearts = 0
+var started = false
 
 func level_mapper(idx: int): 
 	var result = 0
@@ -50,6 +51,10 @@ func _ready():
 		
 		
 func _on_heart_death(): 
+	if !started: 
+		return 
+	started = false
+	
 	hearts -= 1 
 	$PlayerUI/Label.text = "Lifes: " + str(hearts)
 	if hearts <= 0: 
@@ -57,28 +62,28 @@ func _on_heart_death():
 		hearts = g.hearts
 		$PlayerUI/Label.text = "Lifes: " + str(hearts)
 
-	clear()
-	$CanvasLayer.visible = true 
-	await get_tree().create_timer(1).timeout
-	$CanvasLayer.visible = false 
+	await clear()
 	
 	start_level()
 	
 func _on_limitless_death(): 
-	clear()
-	$CanvasLayer.visible = true 
-	await get_tree().create_timer(1).timeout
-	$CanvasLayer.visible = false 
+	if !started: 
+		return 
+	started = false
+	await clear()
 	start_level()
 	death_count += 1
 	$PlayerUI/Label.text = "Death Counts: "+str(death_count)
-func clear(): 
-	if player!=null: 
-		player.queue_free()
-	if current_level!=null: 
-		current_level.queue_free()
 	
+func clear(): 
+	if player != null:
+		player.queue_free()
+	if current_level !=null: 
+		current_level.queue_free()
+	await player.tree_exited
+	await current_level.tree_exited
 func start_level(): 
+	started = true 
 	load_level()
 	load_player()
 	current_level._initialize_(player)
@@ -87,19 +92,19 @@ func start_level():
 func _on_level_done(): 
 	# save new progress 
 	var old = g.read_max_lv_from_file()
-	if real_idx > old: 
-		g.save(str(real_idx))
+	if real_idx+1 > old and real_idx+1 <= 10: 
+		g.save(str(real_idx+1))
 		
 	# do level done 
-	clear()
+	await clear()
 	if real_idx == 10:
 		get_tree().change_scene_to_file("res://UI/win.tscn")
 		return
-	$NextLevel.visible = true
+
 	real_idx += 1 
 	current_level_idx = real_idx
-	await get_tree().create_timer(1).timeout
-	$NextLevel.visible = false
+	
+	
 	start_level()
 	
 func _physics_process(delta): 

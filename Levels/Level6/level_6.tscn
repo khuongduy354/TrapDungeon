@@ -222,153 +222,145 @@ rotation = -3.14159
 position = Vector2(638, 81)
 rotation = -3.14159
 
-[node name="StaticTrap13" parent="StaticTraps" index="3" instance=ExtResource("5_287ub")]
-position = Vector2(693, 112)
-rotation = -3.14159
-
-[node name="StaticTrap14" parent="StaticTraps" index="4" instance=ExtResource("5_287ub")]
-position = Vector2(735, 131)
-rotation = -3.14159
-
-[node name="StaticTrap15" parent="StaticTraps" index="5" instance=ExtResource("5_287ub")]
+[node name="StaticTrap15" parent="StaticTraps" index="3" instance=ExtResource("5_287ub")]
 position = Vector2(788, 192)
 rotation = -3.14159
 
-[node name="StaticTrap16" parent="StaticTraps" index="6" instance=ExtResource("5_287ub")]
+[node name="StaticTrap16" parent="StaticTraps" index="4" instance=ExtResource("5_287ub")]
 position = Vector2(814, 226)
 rotation = -3.14159
 
-[node name="StaticTrap17" parent="StaticTraps" index="7" instance=ExtResource("5_287ub")]
+[node name="StaticTrap17" parent="StaticTraps" index="5" instance=ExtResource("5_287ub")]
 position = Vector2(769, 159)
 rotation = -3.14159
 
-[node name="StaticTrap2" parent="StaticTraps" index="8" instance=ExtResource("5_287ub")]
+[node name="StaticTrap2" parent="StaticTraps" index="6" instance=ExtResource("5_287ub")]
 position = Vector2(617, 191)
 
-[node name="StaticTrap3" parent="StaticTraps" index="9" instance=ExtResource("5_287ub")]
+[node name="StaticTrap3" parent="StaticTraps" index="7" instance=ExtResource("5_287ub")]
 position = Vector2(599, 172)
 
-[node name="StaticTrap4" parent="StaticTraps" index="10" instance=ExtResource("5_287ub")]
+[node name="StaticTrap4" parent="StaticTraps" index="8" instance=ExtResource("5_287ub")]
 position = Vector2(585, 143)
 
-[node name="StaticTrap5" parent="StaticTraps" index="11" instance=ExtResource("5_287ub")]
+[node name="StaticTrap5" parent="StaticTraps" index="9" instance=ExtResource("5_287ub")]
 position = Vector2(633, 208)
 
-[node name="StaticTrap6" parent="StaticTraps" index="12" instance=ExtResource("5_287ub")]
+[node name="StaticTrap6" parent="StaticTraps" index="10" instance=ExtResource("5_287ub")]
 position = Vector2(665, 256)
 
-[node name="StaticTrap19" parent="StaticTraps" index="13" instance=ExtResource("5_287ub")]
+[node name="StaticTrap19" parent="StaticTraps" index="11" instance=ExtResource("5_287ub")]
 position = Vector2(1519, 338)
 rotation = -1.5708
 
-[node name="StaticTrap20" parent="StaticTraps" index="14" instance=ExtResource("5_287ub")]
+[node name="StaticTrap20" parent="StaticTraps" index="12" instance=ExtResource("5_287ub")]
 position = Vector2(1503, 277)
 rotation = -1.5708
 
-[node name="StaticTrap21" parent="StaticTraps" index="15" instance=ExtResource("5_287ub")]
+[node name="StaticTrap21" parent="StaticTraps" index="13" instance=ExtResource("5_287ub")]
 position = Vector2(1517, 318)
 rotation = -1.5708
 
-[node name="StaticTrap7" parent="StaticTraps" index="16" instance=ExtResource("5_287ub")]
+[node name="StaticTrap7" parent="StaticTraps" index="14" instance=ExtResource("5_287ub")]
 position = Vector2(686, 272)
 
-[node name="StaticTrap8" parent="StaticTraps" index="17" instance=ExtResource("5_287ub")]
+[node name="StaticTrap8" parent="StaticTraps" index="15" instance=ExtResource("5_287ub")]
 position = Vector2(713, 318)
 
-[node name="StaticTrap9" parent="StaticTraps" index="18" instance=ExtResource("5_287ub")]
+[node name="StaticTrap9" parent="StaticTraps" index="16" instance=ExtResource("5_287ub")]
 position = Vector2(771, 335)
 
-[node name="StaticTrap22" parent="StaticTraps" index="19" instance=ExtResource("5_287ub")]
+[node name="StaticTrap22" parent="StaticTraps" index="17" instance=ExtResource("5_287ub")]
 position = Vector2(3494, 523)
 scale = Vector2(5.83622, 5.83622)
 
-[node name="StaticTrap23" parent="StaticTraps" index="20" instance=ExtResource("5_287ub")]
+[node name="StaticTrap23" parent="StaticTraps" index="18" instance=ExtResource("5_287ub")]
 position = Vector2(4027, 527)
 scale = Vector2(5.83622, 5.83622)
 
-[node name="StaticTrap24" parent="StaticTraps" index="21" instance=ExtResource("5_287ub")]
+[node name="StaticTrap24" parent="StaticTraps" index="19" instance=ExtResource("5_287ub")]
 position = Vector2(3720, 430)
 rotation = -3.14159
 scale = Vector2(5.83622, 5.83622)
 
-[node name="StaticTrap25" parent="StaticTraps" index="22" instance=ExtResource("5_287ub")]
+[node name="StaticTrap25" parent="StaticTraps" index="20" instance=ExtResource("5_287ub")]
 position = Vector2(4555, 634)
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap26" parent="StaticTraps" index="23" instance=ExtResource("5_287ub")]
+[node name="StaticTrap26" parent="StaticTraps" index="21" instance=ExtResource("5_287ub")]
 position = Vector2(4618, 647)
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap27" parent="StaticTraps" index="24" instance=ExtResource("5_287ub")]
+[node name="StaticTrap27" parent="StaticTraps" index="22" instance=ExtResource("5_287ub")]
 position = Vector2(4696, 590)
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap28" parent="StaticTraps" index="25" instance=ExtResource("5_287ub")]
+[node name="StaticTrap28" parent="StaticTraps" index="23" instance=ExtResource("5_287ub")]
 position = Vector2(4729, 508)
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap29" parent="StaticTraps" index="26" instance=ExtResource("5_287ub")]
+[node name="StaticTrap29" parent="StaticTraps" index="24" instance=ExtResource("5_287ub")]
 position = Vector2(4836, 580)
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap30" parent="StaticTraps" index="27" instance=ExtResource("5_287ub")]
+[node name="StaticTrap30" parent="StaticTraps" index="25" instance=ExtResource("5_287ub")]
 position = Vector2(4939, 584)
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap31" parent="StaticTraps" index="28" instance=ExtResource("5_287ub")]
+[node name="StaticTrap31" parent="StaticTraps" index="26" instance=ExtResource("5_287ub")]
 position = Vector2(4989, 459)
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap32" parent="StaticTraps" index="29" instance=ExtResource("5_287ub")]
+[node name="StaticTrap32" parent="StaticTraps" index="27" instance=ExtResource("5_287ub")]
 position = Vector2(5102, 512)
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap33" parent="StaticTraps" index="30" instance=ExtResource("5_287ub")]
+[node name="StaticTrap33" parent="StaticTraps" index="28" instance=ExtResource("5_287ub")]
 position = Vector2(5252, 512)
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap34" parent="StaticTraps" index="31" instance=ExtResource("5_287ub")]
+[node name="StaticTrap34" parent="StaticTraps" index="29" instance=ExtResource("5_287ub")]
 position = Vector2(5400, 481)
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap35" parent="StaticTraps" index="32" instance=ExtResource("5_287ub")]
+[node name="StaticTrap35" parent="StaticTraps" index="30" instance=ExtResource("5_287ub")]
 position = Vector2(5487, 541)
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap36" parent="StaticTraps" index="33" instance=ExtResource("5_287ub")]
+[node name="StaticTrap36" parent="StaticTraps" index="31" instance=ExtResource("5_287ub")]
 position = Vector2(5268, 282)
 rotation = 3.14159
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap38" parent="StaticTraps" index="34" instance=ExtResource("5_287ub")]
+[node name="StaticTrap38" parent="StaticTraps" index="32" instance=ExtResource("5_287ub")]
 position = Vector2(5340, 358)
 rotation = 3.14159
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap39" parent="StaticTraps" index="35" instance=ExtResource("5_287ub")]
+[node name="StaticTrap39" parent="StaticTraps" index="33" instance=ExtResource("5_287ub")]
 position = Vector2(5024, 353)
 rotation = 3.14159
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap40" parent="StaticTraps" index="36" instance=ExtResource("5_287ub")]
+[node name="StaticTrap40" parent="StaticTraps" index="34" instance=ExtResource("5_287ub")]
 position = Vector2(4885, 268)
 rotation = 3.14159
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap41" parent="StaticTraps" index="37" instance=ExtResource("5_287ub")]
+[node name="StaticTrap41" parent="StaticTraps" index="35" instance=ExtResource("5_287ub")]
 position = Vector2(4687, 393)
 rotation = 3.14159
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap42" parent="StaticTraps" index="38" instance=ExtResource("5_287ub")]
+[node name="StaticTrap42" parent="StaticTraps" index="36" instance=ExtResource("5_287ub")]
 position = Vector2(4352, 389)
 rotation = 3.14159
 scale = Vector2(2.21991, 2.21991)
 
-[node name="StaticTrap10" parent="StaticTraps" index="39" instance=ExtResource("5_287ub")]
+[node name="StaticTrap10" parent="StaticTraps" index="37" instance=ExtResource("5_287ub")]
 position = Vector2(771, 335)
 
-[node name="StaticTrap18" parent="StaticTraps" index="40" instance=ExtResource("5_287ub")]
+[node name="StaticTrap18" parent="StaticTraps" index="38" instance=ExtResource("5_287ub")]
 position = Vector2(904, 335)
 scale = Vector2(8.48924, 8.48924)
 

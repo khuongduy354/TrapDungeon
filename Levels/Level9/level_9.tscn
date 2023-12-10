@@ -27,10 +27,10 @@ layer_0/tile_data = PackedInt32Array(1310720, 196608, 2, 1310721, 196608, 2, 131
 [node name="Positions" type="Node2D" parent="." index="3"]
 
 [node name="Marker2D" type="Marker2D" parent="Positions" index="0"]
-position = Vector2(8, 182)
+position = Vector2(10, 199)
 
 [node name="Marker2D2" type="Marker2D" parent="Positions" index="1"]
-position = Vector2(185, 183)
+position = Vector2(187, 200)
 
 [node name="BlockShooter" parent="." index="4" instance=ExtResource("5_tcpbe")]
 position = Vector2(94, 9)
@@ -80,10 +80,10 @@ shape = SubResource("RectangleShape2D_40pis")
 [node name="Positions2" type="Node2D" parent="." index="10"]
 
 [node name="Marker2D" type="Marker2D" parent="Positions2" index="0"]
-position = Vector2(185, 198)
+position = Vector2(186, 218)
 
 [node name="Marker2D2" type="Marker2D" parent="Positions2" index="1"]
-position = Vector2(8, 198)
+position = Vector2(9, 218)
 
 [node name="ColorRect" type="ColorRect" parent="." index="11"]
 z_index = -5

@@ -6,8 +6,9 @@ func _initialize_(_p: Player):
 	super._initialize_(_p)
 	_p.stuck.connect(func(): g.player_hitted.emit())
 	_p.jump_force = 400
-	
-
+func _ready():
+	$flip/Label.visible = g.show_hint
+	$Label2.visible = g.show_hint
 func check_player():
 	var face_v = Vector2.LEFT 
 	var player_v = slider.global_position.direction_to(p.global_position)

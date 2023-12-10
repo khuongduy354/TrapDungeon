@@ -6,7 +6,10 @@ func _initialize_(_p: Player):
 	$BouncyBall.bounce_changed.connect(_on_bounce_change)
 	setup_switches()
 	$BouncyBall.set_physics_process(false)
-	
+func _ready(): 
+	$CanvasLayer/Label = g.show_hint
+	$Label2.visible = g.show_hint
+	$Label3 = g.show_hint
 func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and !started: 
 		started = true

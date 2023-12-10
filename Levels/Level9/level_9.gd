@@ -10,7 +10,10 @@ func _physics_process(delta):
 		if $shooter_timer.is_stopped():
 			$shooter_timer.start()
 		$BlockShooter.shoot(p.global_position)
-
+func _ready():
+	var l = [$Label,$Label3, $Label2] 
+	for e in l: 
+		e.visible = g.show_hint
 func _initialize_(_p: Player): 
 	super._initialize_(_p)
 	_p.stuck.connect(func(): g.player_hitted.emit())

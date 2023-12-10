@@ -7,8 +7,7 @@ func _initialize_(_p: Player):
 	_p.cam.zoom = Vector2(1.5,1.5)
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	$Label.visble = g.show_hint
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -24,7 +23,9 @@ func _on_c_1_body_entered(body):
 func _on_c_2_body_entered(body):
 	$sliders/RigidBody2D9.shoot_left_to_right()
 	$AnimationPlayer.play("rotate")
-
+	$trigger/c2.monitorable = false 
+	$trigger/c2.monitoring = false 
+	
 
 func _on_spawnoncollide_body_entered(body):
 	for colli in $trigger/spawnoncollide.get_children(): 

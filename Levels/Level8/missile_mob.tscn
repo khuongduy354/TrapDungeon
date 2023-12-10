@@ -19,5 +19,4 @@ region_rect = Rect2(370, 308, 13, 12)
 
 [node name="CollisionShape2D" parent="Hitbox" index="0"]
 position = Vector2(43.5307, 36.8336)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_cipb3")
